@@ -20,252 +20,348 @@ import Data.StrMap as StrMap
 import AWS.Request as Request
 import AWS.Request.Types as Types
 
-serviceName = "DeviceFarm" :: String
-
 
 -- | <p>Creates a device pool.</p>
 createDevicePool :: forall eff. CreateDevicePoolRequest -> Aff (exception :: EXCEPTION | eff) CreateDevicePoolResult
-createDevicePool = Request.request serviceName "createDevicePool" 
+createDevicePool = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "createDevicePool"
 
 
 -- | <p>Creates a network profile.</p>
 createNetworkProfile :: forall eff. CreateNetworkProfileRequest -> Aff (exception :: EXCEPTION | eff) CreateNetworkProfileResult
-createNetworkProfile = Request.request serviceName "createNetworkProfile" 
+createNetworkProfile = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "createNetworkProfile"
 
 
 -- | <p>Creates a new project.</p>
 createProject :: forall eff. CreateProjectRequest -> Aff (exception :: EXCEPTION | eff) CreateProjectResult
-createProject = Request.request serviceName "createProject" 
+createProject = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "createProject"
 
 
 -- | <p>Specifies and starts a remote access session.</p>
 createRemoteAccessSession :: forall eff. CreateRemoteAccessSessionRequest -> Aff (exception :: EXCEPTION | eff) CreateRemoteAccessSessionResult
-createRemoteAccessSession = Request.request serviceName "createRemoteAccessSession" 
+createRemoteAccessSession = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "createRemoteAccessSession"
 
 
 -- | <p>Uploads an app or test scripts.</p>
 createUpload :: forall eff. CreateUploadRequest -> Aff (exception :: EXCEPTION | eff) CreateUploadResult
-createUpload = Request.request serviceName "createUpload" 
+createUpload = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "createUpload"
 
 
 -- | <p>Deletes a device pool given the pool ARN. Does not allow deletion of curated pools owned by the system.</p>
 deleteDevicePool :: forall eff. DeleteDevicePoolRequest -> Aff (exception :: EXCEPTION | eff) DeleteDevicePoolResult
-deleteDevicePool = Request.request serviceName "deleteDevicePool" 
+deleteDevicePool = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "deleteDevicePool"
 
 
 -- | <p>Deletes a network profile.</p>
 deleteNetworkProfile :: forall eff. DeleteNetworkProfileRequest -> Aff (exception :: EXCEPTION | eff) DeleteNetworkProfileResult
-deleteNetworkProfile = Request.request serviceName "deleteNetworkProfile" 
+deleteNetworkProfile = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "deleteNetworkProfile"
 
 
 -- | <p>Deletes an AWS Device Farm project, given the project ARN.</p> <p> <b>Note</b> Deleting this resource does not stop an in-progress run.</p>
 deleteProject :: forall eff. DeleteProjectRequest -> Aff (exception :: EXCEPTION | eff) DeleteProjectResult
-deleteProject = Request.request serviceName "deleteProject" 
+deleteProject = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "deleteProject"
 
 
 -- | <p>Deletes a completed remote access session and its results.</p>
 deleteRemoteAccessSession :: forall eff. DeleteRemoteAccessSessionRequest -> Aff (exception :: EXCEPTION | eff) DeleteRemoteAccessSessionResult
-deleteRemoteAccessSession = Request.request serviceName "deleteRemoteAccessSession" 
+deleteRemoteAccessSession = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "deleteRemoteAccessSession"
 
 
 -- | <p>Deletes the run, given the run ARN.</p> <p> <b>Note</b> Deleting this resource does not stop an in-progress run.</p>
 deleteRun :: forall eff. DeleteRunRequest -> Aff (exception :: EXCEPTION | eff) DeleteRunResult
-deleteRun = Request.request serviceName "deleteRun" 
+deleteRun = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "deleteRun"
 
 
 -- | <p>Deletes an upload given the upload ARN.</p>
 deleteUpload :: forall eff. DeleteUploadRequest -> Aff (exception :: EXCEPTION | eff) DeleteUploadResult
-deleteUpload = Request.request serviceName "deleteUpload" 
+deleteUpload = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "deleteUpload"
 
 
 -- | <p>Returns the number of unmetered iOS and/or unmetered Android devices that have been purchased by the account.</p>
 getAccountSettings :: forall eff. GetAccountSettingsRequest -> Aff (exception :: EXCEPTION | eff) GetAccountSettingsResult
-getAccountSettings = Request.request serviceName "getAccountSettings" 
+getAccountSettings = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "getAccountSettings"
 
 
 -- | <p>Gets information about a unique device type.</p>
 getDevice :: forall eff. GetDeviceRequest -> Aff (exception :: EXCEPTION | eff) GetDeviceResult
-getDevice = Request.request serviceName "getDevice" 
+getDevice = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "getDevice"
 
 
 -- | <p>Gets information about a device pool.</p>
 getDevicePool :: forall eff. GetDevicePoolRequest -> Aff (exception :: EXCEPTION | eff) GetDevicePoolResult
-getDevicePool = Request.request serviceName "getDevicePool" 
+getDevicePool = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "getDevicePool"
 
 
 -- | <p>Gets information about compatibility with a device pool.</p>
 getDevicePoolCompatibility :: forall eff. GetDevicePoolCompatibilityRequest -> Aff (exception :: EXCEPTION | eff) GetDevicePoolCompatibilityResult
-getDevicePoolCompatibility = Request.request serviceName "getDevicePoolCompatibility" 
+getDevicePoolCompatibility = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "getDevicePoolCompatibility"
 
 
 -- | <p>Gets information about a job.</p>
 getJob :: forall eff. GetJobRequest -> Aff (exception :: EXCEPTION | eff) GetJobResult
-getJob = Request.request serviceName "getJob" 
+getJob = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "getJob"
 
 
 -- | <p>Returns information about a network profile.</p>
 getNetworkProfile :: forall eff. GetNetworkProfileRequest -> Aff (exception :: EXCEPTION | eff) GetNetworkProfileResult
-getNetworkProfile = Request.request serviceName "getNetworkProfile" 
+getNetworkProfile = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "getNetworkProfile"
 
 
 -- | <p>Gets the current status and future status of all offerings purchased by an AWS account. The response indicates how many offerings are currently available and the offerings that will be available in the next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.</p>
 getOfferingStatus :: forall eff. GetOfferingStatusRequest -> Aff (exception :: EXCEPTION | eff) GetOfferingStatusResult
-getOfferingStatus = Request.request serviceName "getOfferingStatus" 
+getOfferingStatus = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "getOfferingStatus"
 
 
 -- | <p>Gets information about a project.</p>
 getProject :: forall eff. GetProjectRequest -> Aff (exception :: EXCEPTION | eff) GetProjectResult
-getProject = Request.request serviceName "getProject" 
+getProject = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "getProject"
 
 
 -- | <p>Returns a link to a currently running remote access session.</p>
 getRemoteAccessSession :: forall eff. GetRemoteAccessSessionRequest -> Aff (exception :: EXCEPTION | eff) GetRemoteAccessSessionResult
-getRemoteAccessSession = Request.request serviceName "getRemoteAccessSession" 
+getRemoteAccessSession = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "getRemoteAccessSession"
 
 
 -- | <p>Gets information about a run.</p>
 getRun :: forall eff. GetRunRequest -> Aff (exception :: EXCEPTION | eff) GetRunResult
-getRun = Request.request serviceName "getRun" 
+getRun = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "getRun"
 
 
 -- | <p>Gets information about a suite.</p>
 getSuite :: forall eff. GetSuiteRequest -> Aff (exception :: EXCEPTION | eff) GetSuiteResult
-getSuite = Request.request serviceName "getSuite" 
+getSuite = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "getSuite"
 
 
 -- | <p>Gets information about a test.</p>
 getTest :: forall eff. GetTestRequest -> Aff (exception :: EXCEPTION | eff) GetTestResult
-getTest = Request.request serviceName "getTest" 
+getTest = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "getTest"
 
 
 -- | <p>Gets information about an upload.</p>
 getUpload :: forall eff. GetUploadRequest -> Aff (exception :: EXCEPTION | eff) GetUploadResult
-getUpload = Request.request serviceName "getUpload" 
+getUpload = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "getUpload"
 
 
 -- | <p>Installs an application to the device in a remote access session. For Android applications, the file must be in .apk format. For iOS applications, the file must be in .ipa format.</p>
 installToRemoteAccessSession :: forall eff. InstallToRemoteAccessSessionRequest -> Aff (exception :: EXCEPTION | eff) InstallToRemoteAccessSessionResult
-installToRemoteAccessSession = Request.request serviceName "installToRemoteAccessSession" 
+installToRemoteAccessSession = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "installToRemoteAccessSession"
 
 
 -- | <p>Gets information about artifacts.</p>
 listArtifacts :: forall eff. ListArtifactsRequest -> Aff (exception :: EXCEPTION | eff) ListArtifactsResult
-listArtifacts = Request.request serviceName "listArtifacts" 
+listArtifacts = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listArtifacts"
 
 
 -- | <p>Gets information about device pools.</p>
 listDevicePools :: forall eff. ListDevicePoolsRequest -> Aff (exception :: EXCEPTION | eff) ListDevicePoolsResult
-listDevicePools = Request.request serviceName "listDevicePools" 
+listDevicePools = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listDevicePools"
 
 
 -- | <p>Gets information about unique device types.</p>
 listDevices :: forall eff. ListDevicesRequest -> Aff (exception :: EXCEPTION | eff) ListDevicesResult
-listDevices = Request.request serviceName "listDevices" 
+listDevices = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listDevices"
 
 
 -- | <p>Gets information about jobs for a given test run.</p>
 listJobs :: forall eff. ListJobsRequest -> Aff (exception :: EXCEPTION | eff) ListJobsResult
-listJobs = Request.request serviceName "listJobs" 
+listJobs = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listJobs"
 
 
 -- | <p>Returns the list of available network profiles.</p>
 listNetworkProfiles :: forall eff. ListNetworkProfilesRequest -> Aff (exception :: EXCEPTION | eff) ListNetworkProfilesResult
-listNetworkProfiles = Request.request serviceName "listNetworkProfiles" 
+listNetworkProfiles = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listNetworkProfiles"
 
 
 -- | <p>Returns a list of offering promotions. Each offering promotion record contains the ID and description of the promotion. The API returns a <code>NotEligible</code> error if the caller is not permitted to invoke the operation. Contact <a href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.</p>
 listOfferingPromotions :: forall eff. ListOfferingPromotionsRequest -> Aff (exception :: EXCEPTION | eff) ListOfferingPromotionsResult
-listOfferingPromotions = Request.request serviceName "listOfferingPromotions" 
+listOfferingPromotions = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listOfferingPromotions"
 
 
 -- | <p>Returns a list of all historical purchases, renewals, and system renewal transactions for an AWS account. The list is paginated and ordered by a descending timestamp (most recent transactions are first). The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.</p>
 listOfferingTransactions :: forall eff. ListOfferingTransactionsRequest -> Aff (exception :: EXCEPTION | eff) ListOfferingTransactionsResult
-listOfferingTransactions = Request.request serviceName "listOfferingTransactions" 
+listOfferingTransactions = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listOfferingTransactions"
 
 
 -- | <p>Returns a list of products or offerings that the user can manage through the API. Each offering record indicates the recurring price per unit and the frequency for that offering. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.</p>
 listOfferings :: forall eff. ListOfferingsRequest -> Aff (exception :: EXCEPTION | eff) ListOfferingsResult
-listOfferings = Request.request serviceName "listOfferings" 
+listOfferings = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listOfferings"
 
 
 -- | <p>Gets information about projects.</p>
 listProjects :: forall eff. ListProjectsRequest -> Aff (exception :: EXCEPTION | eff) ListProjectsResult
-listProjects = Request.request serviceName "listProjects" 
+listProjects = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listProjects"
 
 
 -- | <p>Returns a list of all currently running remote access sessions.</p>
 listRemoteAccessSessions :: forall eff. ListRemoteAccessSessionsRequest -> Aff (exception :: EXCEPTION | eff) ListRemoteAccessSessionsResult
-listRemoteAccessSessions = Request.request serviceName "listRemoteAccessSessions" 
+listRemoteAccessSessions = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listRemoteAccessSessions"
 
 
 -- | <p>Gets information about runs, given an AWS Device Farm project ARN.</p>
 listRuns :: forall eff. ListRunsRequest -> Aff (exception :: EXCEPTION | eff) ListRunsResult
-listRuns = Request.request serviceName "listRuns" 
+listRuns = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listRuns"
 
 
 -- | <p>Gets information about samples, given an AWS Device Farm project ARN</p>
 listSamples :: forall eff. ListSamplesRequest -> Aff (exception :: EXCEPTION | eff) ListSamplesResult
-listSamples = Request.request serviceName "listSamples" 
+listSamples = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listSamples"
 
 
 -- | <p>Gets information about test suites for a given job.</p>
 listSuites :: forall eff. ListSuitesRequest -> Aff (exception :: EXCEPTION | eff) ListSuitesResult
-listSuites = Request.request serviceName "listSuites" 
+listSuites = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listSuites"
 
 
 -- | <p>Gets information about tests in a given test suite.</p>
 listTests :: forall eff. ListTestsRequest -> Aff (exception :: EXCEPTION | eff) ListTestsResult
-listTests = Request.request serviceName "listTests" 
+listTests = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listTests"
 
 
 -- | <p>Gets information about unique problems.</p>
 listUniqueProblems :: forall eff. ListUniqueProblemsRequest -> Aff (exception :: EXCEPTION | eff) ListUniqueProblemsResult
-listUniqueProblems = Request.request serviceName "listUniqueProblems" 
+listUniqueProblems = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listUniqueProblems"
 
 
 -- | <p>Gets information about uploads, given an AWS Device Farm project ARN.</p>
 listUploads :: forall eff. ListUploadsRequest -> Aff (exception :: EXCEPTION | eff) ListUploadsResult
-listUploads = Request.request serviceName "listUploads" 
+listUploads = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "listUploads"
 
 
 -- | <p>Immediately purchases offerings for an AWS account. Offerings renew with the latest total purchased quantity for an offering, unless the renewal was overridden. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.</p>
 purchaseOffering :: forall eff. PurchaseOfferingRequest -> Aff (exception :: EXCEPTION | eff) PurchaseOfferingResult
-purchaseOffering = Request.request serviceName "purchaseOffering" 
+purchaseOffering = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "purchaseOffering"
 
 
 -- | <p>Explicitly sets the quantity of devices to renew for an offering, starting from the <code>effectiveDate</code> of the next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.</p>
 renewOffering :: forall eff. RenewOfferingRequest -> Aff (exception :: EXCEPTION | eff) RenewOfferingResult
-renewOffering = Request.request serviceName "renewOffering" 
+renewOffering = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "renewOffering"
 
 
 -- | <p>Schedules a run.</p>
 scheduleRun :: forall eff. ScheduleRunRequest -> Aff (exception :: EXCEPTION | eff) ScheduleRunResult
-scheduleRun = Request.request serviceName "scheduleRun" 
+scheduleRun = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "scheduleRun"
 
 
 -- | <p>Ends a specified remote access session.</p>
 stopRemoteAccessSession :: forall eff. StopRemoteAccessSessionRequest -> Aff (exception :: EXCEPTION | eff) StopRemoteAccessSessionResult
-stopRemoteAccessSession = Request.request serviceName "stopRemoteAccessSession" 
+stopRemoteAccessSession = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "stopRemoteAccessSession"
 
 
 -- | <p>Initiates a stop request for the current test run. AWS Device Farm will immediately stop the run on devices where tests have not started executing, and you will not be billed for these devices. On devices where tests have started executing, Setup Suite and Teardown Suite tests will run to completion before stopping execution on those devices. You will be billed for Setup, Teardown, and any tests that were in progress or already completed.</p>
 stopRun :: forall eff. StopRunRequest -> Aff (exception :: EXCEPTION | eff) StopRunResult
-stopRun = Request.request serviceName "stopRun" 
+stopRun = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "stopRun"
 
 
 -- | <p>Modifies the name, description, and rules in a device pool given the attributes and the pool ARN. Rule updates are all-or-nothing, meaning they can only be updated as a whole (or not at all).</p>
 updateDevicePool :: forall eff. UpdateDevicePoolRequest -> Aff (exception :: EXCEPTION | eff) UpdateDevicePoolResult
-updateDevicePool = Request.request serviceName "updateDevicePool" 
+updateDevicePool = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "updateDevicePool"
 
 
 -- | <p>Updates the network profile with specific settings.</p>
 updateNetworkProfile :: forall eff. UpdateNetworkProfileRequest -> Aff (exception :: EXCEPTION | eff) UpdateNetworkProfileResult
-updateNetworkProfile = Request.request serviceName "updateNetworkProfile" 
+updateNetworkProfile = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "updateNetworkProfile"
 
 
 -- | <p>Modifies the specified project name, given the project ARN and a new name.</p>
 updateProject :: forall eff. UpdateProjectRequest -> Aff (exception :: EXCEPTION | eff) UpdateProjectResult
-updateProject = Request.request serviceName "updateProject" 
+updateProject = Request.request service method  where
+    service = Request.ServiceName "DeviceFarm"
+    method = Request.MethodName "updateProject"
 
 
 newtype AWSAccountNumber = AWSAccountNumber String
