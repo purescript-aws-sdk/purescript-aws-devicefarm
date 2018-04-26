@@ -26,7 +26,7 @@ Encode AWSAccountNumber
 
 ``` purescript
 newtype AccountSettings
-  = AccountSettings { awsAccountNumber :: NullOrUndefined (AWSAccountNumber), unmeteredDevices :: NullOrUndefined (PurchasedDevicesMap), unmeteredRemoteAccessDevices :: NullOrUndefined (PurchasedDevicesMap), maxJobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes), trialMinutes :: NullOrUndefined (TrialMinutes), maxSlots :: NullOrUndefined (MaxSlotMap), defaultJobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes) }
+  = AccountSettings { awsAccountNumber :: Maybe (AWSAccountNumber), unmeteredDevices :: Maybe (PurchasedDevicesMap), unmeteredRemoteAccessDevices :: Maybe (PurchasedDevicesMap), maxJobTimeoutMinutes :: Maybe (JobTimeoutMinutes), trialMinutes :: Maybe (TrialMinutes), maxSlots :: Maybe (MaxSlotMap), defaultJobTimeoutMinutes :: Maybe (JobTimeoutMinutes) }
 ```
 
 <p>A container for account-level settings within AWS Device Farm.</p>
@@ -51,7 +51,7 @@ Constructs AccountSettings from required parameters
 #### `newAccountSettings'`
 
 ``` purescript
-newAccountSettings' :: ({ awsAccountNumber :: NullOrUndefined (AWSAccountNumber), unmeteredDevices :: NullOrUndefined (PurchasedDevicesMap), unmeteredRemoteAccessDevices :: NullOrUndefined (PurchasedDevicesMap), maxJobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes), trialMinutes :: NullOrUndefined (TrialMinutes), maxSlots :: NullOrUndefined (MaxSlotMap), defaultJobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes) } -> { awsAccountNumber :: NullOrUndefined (AWSAccountNumber), unmeteredDevices :: NullOrUndefined (PurchasedDevicesMap), unmeteredRemoteAccessDevices :: NullOrUndefined (PurchasedDevicesMap), maxJobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes), trialMinutes :: NullOrUndefined (TrialMinutes), maxSlots :: NullOrUndefined (MaxSlotMap), defaultJobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes) }) -> AccountSettings
+newAccountSettings' :: ({ awsAccountNumber :: Maybe (AWSAccountNumber), unmeteredDevices :: Maybe (PurchasedDevicesMap), unmeteredRemoteAccessDevices :: Maybe (PurchasedDevicesMap), maxJobTimeoutMinutes :: Maybe (JobTimeoutMinutes), trialMinutes :: Maybe (TrialMinutes), maxSlots :: Maybe (MaxSlotMap), defaultJobTimeoutMinutes :: Maybe (JobTimeoutMinutes) } -> { awsAccountNumber :: Maybe (AWSAccountNumber), unmeteredDevices :: Maybe (PurchasedDevicesMap), unmeteredRemoteAccessDevices :: Maybe (PurchasedDevicesMap), maxJobTimeoutMinutes :: Maybe (JobTimeoutMinutes), trialMinutes :: Maybe (TrialMinutes), maxSlots :: Maybe (MaxSlotMap), defaultJobTimeoutMinutes :: Maybe (JobTimeoutMinutes) }) -> AccountSettings
 ```
 
 Constructs AccountSettings's fields from required parameters
@@ -140,7 +140,7 @@ Encode AppPackagesCleanup
 
 ``` purescript
 newtype ArgumentException
-  = ArgumentException { message :: NullOrUndefined (Message) }
+  = ArgumentException { message :: Maybe (Message) }
 ```
 
 <p>An invalid argument was specified.</p>
@@ -165,7 +165,7 @@ Constructs ArgumentException from required parameters
 #### `newArgumentException'`
 
 ``` purescript
-newArgumentException' :: ({ message :: NullOrUndefined (Message) } -> { message :: NullOrUndefined (Message) }) -> ArgumentException
+newArgumentException' :: ({ message :: Maybe (Message) } -> { message :: Maybe (Message) }) -> ArgumentException
 ```
 
 Constructs ArgumentException's fields from required parameters
@@ -174,7 +174,7 @@ Constructs ArgumentException's fields from required parameters
 
 ``` purescript
 newtype Artifact
-  = Artifact { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), "type" :: NullOrUndefined (ArtifactType), extension :: NullOrUndefined (String), url :: NullOrUndefined (URL) }
+  = Artifact { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), "type" :: Maybe (ArtifactType), extension :: Maybe (String), url :: Maybe (URL) }
 ```
 
 <p>Represents the output of a test. Examples of artifacts include logs and screenshots.</p>
@@ -199,7 +199,7 @@ Constructs Artifact from required parameters
 #### `newArtifact'`
 
 ``` purescript
-newArtifact' :: ({ arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), "type" :: NullOrUndefined (ArtifactType), extension :: NullOrUndefined (String), url :: NullOrUndefined (URL) } -> { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), "type" :: NullOrUndefined (ArtifactType), extension :: NullOrUndefined (String), url :: NullOrUndefined (URL) }) -> Artifact
+newArtifact' :: ({ arn :: Maybe (AmazonResourceName), name :: Maybe (Name), "type" :: Maybe (ArtifactType), extension :: Maybe (String), url :: Maybe (URL) } -> { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), "type" :: Maybe (ArtifactType), extension :: Maybe (String), url :: Maybe (URL) }) -> Artifact
 ```
 
 Constructs Artifact's fields from required parameters
@@ -272,7 +272,7 @@ Encode BillingMethod
 
 ``` purescript
 newtype CPU
-  = CPU { frequency :: NullOrUndefined (String), architecture :: NullOrUndefined (String), clock :: NullOrUndefined (Number) }
+  = CPU { frequency :: Maybe (String), architecture :: Maybe (String), clock :: Maybe (Number) }
 ```
 
 <p>Represents the amount of CPU that an app is using on a physical device.</p> <p>Note that this does not represent system-wide CPU usage.</p>
@@ -297,7 +297,7 @@ Constructs CPU from required parameters
 #### `newCPU'`
 
 ``` purescript
-newCPU' :: ({ frequency :: NullOrUndefined (String), architecture :: NullOrUndefined (String), clock :: NullOrUndefined (Number) } -> { frequency :: NullOrUndefined (String), architecture :: NullOrUndefined (String), clock :: NullOrUndefined (Number) }) -> CPU
+newCPU' :: ({ frequency :: Maybe (String), architecture :: Maybe (String), clock :: Maybe (Number) } -> { frequency :: Maybe (String), architecture :: Maybe (String), clock :: Maybe (Number) }) -> CPU
 ```
 
 Constructs CPU's fields from required parameters
@@ -338,7 +338,7 @@ Encode ContentType
 
 ``` purescript
 newtype Counters
-  = Counters { total :: NullOrUndefined (Int), passed :: NullOrUndefined (Int), failed :: NullOrUndefined (Int), warned :: NullOrUndefined (Int), errored :: NullOrUndefined (Int), stopped :: NullOrUndefined (Int), skipped :: NullOrUndefined (Int) }
+  = Counters { total :: Maybe (Int), passed :: Maybe (Int), failed :: Maybe (Int), warned :: Maybe (Int), errored :: Maybe (Int), stopped :: Maybe (Int), skipped :: Maybe (Int) }
 ```
 
 <p>Represents entity counters.</p>
@@ -363,7 +363,7 @@ Constructs Counters from required parameters
 #### `newCounters'`
 
 ``` purescript
-newCounters' :: ({ total :: NullOrUndefined (Int), passed :: NullOrUndefined (Int), failed :: NullOrUndefined (Int), warned :: NullOrUndefined (Int), errored :: NullOrUndefined (Int), stopped :: NullOrUndefined (Int), skipped :: NullOrUndefined (Int) } -> { total :: NullOrUndefined (Int), passed :: NullOrUndefined (Int), failed :: NullOrUndefined (Int), warned :: NullOrUndefined (Int), errored :: NullOrUndefined (Int), stopped :: NullOrUndefined (Int), skipped :: NullOrUndefined (Int) }) -> Counters
+newCounters' :: ({ total :: Maybe (Int), passed :: Maybe (Int), failed :: Maybe (Int), warned :: Maybe (Int), errored :: Maybe (Int), stopped :: Maybe (Int), skipped :: Maybe (Int) } -> { total :: Maybe (Int), passed :: Maybe (Int), failed :: Maybe (Int), warned :: Maybe (Int), errored :: Maybe (Int), stopped :: Maybe (Int), skipped :: Maybe (Int) }) -> Counters
 ```
 
 Constructs Counters's fields from required parameters
@@ -372,7 +372,7 @@ Constructs Counters's fields from required parameters
 
 ``` purescript
 newtype CreateDevicePoolRequest
-  = CreateDevicePoolRequest { projectArn :: AmazonResourceName, name :: Name, description :: NullOrUndefined (Message), rules :: Rules }
+  = CreateDevicePoolRequest { projectArn :: AmazonResourceName, name :: Name, description :: Maybe (Message), rules :: Rules }
 ```
 
 <p>Represents a request to the create device pool operation.</p>
@@ -397,7 +397,7 @@ Constructs CreateDevicePoolRequest from required parameters
 #### `newCreateDevicePoolRequest'`
 
 ``` purescript
-newCreateDevicePoolRequest' :: Name -> AmazonResourceName -> Rules -> ({ projectArn :: AmazonResourceName, name :: Name, description :: NullOrUndefined (Message), rules :: Rules } -> { projectArn :: AmazonResourceName, name :: Name, description :: NullOrUndefined (Message), rules :: Rules }) -> CreateDevicePoolRequest
+newCreateDevicePoolRequest' :: Name -> AmazonResourceName -> Rules -> ({ projectArn :: AmazonResourceName, name :: Name, description :: Maybe (Message), rules :: Rules } -> { projectArn :: AmazonResourceName, name :: Name, description :: Maybe (Message), rules :: Rules }) -> CreateDevicePoolRequest
 ```
 
 Constructs CreateDevicePoolRequest's fields from required parameters
@@ -406,7 +406,7 @@ Constructs CreateDevicePoolRequest's fields from required parameters
 
 ``` purescript
 newtype CreateDevicePoolResult
-  = CreateDevicePoolResult { devicePool :: NullOrUndefined (DevicePool) }
+  = CreateDevicePoolResult { devicePool :: Maybe (DevicePool) }
 ```
 
 <p>Represents the result of a create device pool request.</p>
@@ -431,7 +431,7 @@ Constructs CreateDevicePoolResult from required parameters
 #### `newCreateDevicePoolResult'`
 
 ``` purescript
-newCreateDevicePoolResult' :: ({ devicePool :: NullOrUndefined (DevicePool) } -> { devicePool :: NullOrUndefined (DevicePool) }) -> CreateDevicePoolResult
+newCreateDevicePoolResult' :: ({ devicePool :: Maybe (DevicePool) } -> { devicePool :: Maybe (DevicePool) }) -> CreateDevicePoolResult
 ```
 
 Constructs CreateDevicePoolResult's fields from required parameters
@@ -440,7 +440,7 @@ Constructs CreateDevicePoolResult's fields from required parameters
 
 ``` purescript
 newtype CreateNetworkProfileRequest
-  = CreateNetworkProfileRequest { projectArn :: AmazonResourceName, name :: Name, description :: NullOrUndefined (Message), "type" :: NullOrUndefined (NetworkProfileType), uplinkBandwidthBits :: NullOrUndefined (Number), downlinkBandwidthBits :: NullOrUndefined (Number), uplinkDelayMs :: NullOrUndefined (Number), downlinkDelayMs :: NullOrUndefined (Number), uplinkJitterMs :: NullOrUndefined (Number), downlinkJitterMs :: NullOrUndefined (Number), uplinkLossPercent :: NullOrUndefined (PercentInteger), downlinkLossPercent :: NullOrUndefined (PercentInteger) }
+  = CreateNetworkProfileRequest { projectArn :: AmazonResourceName, name :: Name, description :: Maybe (Message), "type" :: Maybe (NetworkProfileType), uplinkBandwidthBits :: Maybe (Number), downlinkBandwidthBits :: Maybe (Number), uplinkDelayMs :: Maybe (Number), downlinkDelayMs :: Maybe (Number), uplinkJitterMs :: Maybe (Number), downlinkJitterMs :: Maybe (Number), uplinkLossPercent :: Maybe (PercentInteger), downlinkLossPercent :: Maybe (PercentInteger) }
 ```
 
 ##### Instances
@@ -463,7 +463,7 @@ Constructs CreateNetworkProfileRequest from required parameters
 #### `newCreateNetworkProfileRequest'`
 
 ``` purescript
-newCreateNetworkProfileRequest' :: Name -> AmazonResourceName -> ({ projectArn :: AmazonResourceName, name :: Name, description :: NullOrUndefined (Message), "type" :: NullOrUndefined (NetworkProfileType), uplinkBandwidthBits :: NullOrUndefined (Number), downlinkBandwidthBits :: NullOrUndefined (Number), uplinkDelayMs :: NullOrUndefined (Number), downlinkDelayMs :: NullOrUndefined (Number), uplinkJitterMs :: NullOrUndefined (Number), downlinkJitterMs :: NullOrUndefined (Number), uplinkLossPercent :: NullOrUndefined (PercentInteger), downlinkLossPercent :: NullOrUndefined (PercentInteger) } -> { projectArn :: AmazonResourceName, name :: Name, description :: NullOrUndefined (Message), "type" :: NullOrUndefined (NetworkProfileType), uplinkBandwidthBits :: NullOrUndefined (Number), downlinkBandwidthBits :: NullOrUndefined (Number), uplinkDelayMs :: NullOrUndefined (Number), downlinkDelayMs :: NullOrUndefined (Number), uplinkJitterMs :: NullOrUndefined (Number), downlinkJitterMs :: NullOrUndefined (Number), uplinkLossPercent :: NullOrUndefined (PercentInteger), downlinkLossPercent :: NullOrUndefined (PercentInteger) }) -> CreateNetworkProfileRequest
+newCreateNetworkProfileRequest' :: Name -> AmazonResourceName -> ({ projectArn :: AmazonResourceName, name :: Name, description :: Maybe (Message), "type" :: Maybe (NetworkProfileType), uplinkBandwidthBits :: Maybe (Number), downlinkBandwidthBits :: Maybe (Number), uplinkDelayMs :: Maybe (Number), downlinkDelayMs :: Maybe (Number), uplinkJitterMs :: Maybe (Number), downlinkJitterMs :: Maybe (Number), uplinkLossPercent :: Maybe (PercentInteger), downlinkLossPercent :: Maybe (PercentInteger) } -> { projectArn :: AmazonResourceName, name :: Name, description :: Maybe (Message), "type" :: Maybe (NetworkProfileType), uplinkBandwidthBits :: Maybe (Number), downlinkBandwidthBits :: Maybe (Number), uplinkDelayMs :: Maybe (Number), downlinkDelayMs :: Maybe (Number), uplinkJitterMs :: Maybe (Number), downlinkJitterMs :: Maybe (Number), uplinkLossPercent :: Maybe (PercentInteger), downlinkLossPercent :: Maybe (PercentInteger) }) -> CreateNetworkProfileRequest
 ```
 
 Constructs CreateNetworkProfileRequest's fields from required parameters
@@ -472,7 +472,7 @@ Constructs CreateNetworkProfileRequest's fields from required parameters
 
 ``` purescript
 newtype CreateNetworkProfileResult
-  = CreateNetworkProfileResult { networkProfile :: NullOrUndefined (NetworkProfile) }
+  = CreateNetworkProfileResult { networkProfile :: Maybe (NetworkProfile) }
 ```
 
 ##### Instances
@@ -495,7 +495,7 @@ Constructs CreateNetworkProfileResult from required parameters
 #### `newCreateNetworkProfileResult'`
 
 ``` purescript
-newCreateNetworkProfileResult' :: ({ networkProfile :: NullOrUndefined (NetworkProfile) } -> { networkProfile :: NullOrUndefined (NetworkProfile) }) -> CreateNetworkProfileResult
+newCreateNetworkProfileResult' :: ({ networkProfile :: Maybe (NetworkProfile) } -> { networkProfile :: Maybe (NetworkProfile) }) -> CreateNetworkProfileResult
 ```
 
 Constructs CreateNetworkProfileResult's fields from required parameters
@@ -504,7 +504,7 @@ Constructs CreateNetworkProfileResult's fields from required parameters
 
 ``` purescript
 newtype CreateProjectRequest
-  = CreateProjectRequest { name :: Name, defaultJobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes) }
+  = CreateProjectRequest { name :: Name, defaultJobTimeoutMinutes :: Maybe (JobTimeoutMinutes) }
 ```
 
 <p>Represents a request to the create project operation.</p>
@@ -529,7 +529,7 @@ Constructs CreateProjectRequest from required parameters
 #### `newCreateProjectRequest'`
 
 ``` purescript
-newCreateProjectRequest' :: Name -> ({ name :: Name, defaultJobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes) } -> { name :: Name, defaultJobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes) }) -> CreateProjectRequest
+newCreateProjectRequest' :: Name -> ({ name :: Name, defaultJobTimeoutMinutes :: Maybe (JobTimeoutMinutes) } -> { name :: Name, defaultJobTimeoutMinutes :: Maybe (JobTimeoutMinutes) }) -> CreateProjectRequest
 ```
 
 Constructs CreateProjectRequest's fields from required parameters
@@ -538,7 +538,7 @@ Constructs CreateProjectRequest's fields from required parameters
 
 ``` purescript
 newtype CreateProjectResult
-  = CreateProjectResult { project :: NullOrUndefined (Project) }
+  = CreateProjectResult { project :: Maybe (Project) }
 ```
 
 <p>Represents the result of a create project request.</p>
@@ -563,7 +563,7 @@ Constructs CreateProjectResult from required parameters
 #### `newCreateProjectResult'`
 
 ``` purescript
-newCreateProjectResult' :: ({ project :: NullOrUndefined (Project) } -> { project :: NullOrUndefined (Project) }) -> CreateProjectResult
+newCreateProjectResult' :: ({ project :: Maybe (Project) } -> { project :: Maybe (Project) }) -> CreateProjectResult
 ```
 
 Constructs CreateProjectResult's fields from required parameters
@@ -572,7 +572,7 @@ Constructs CreateProjectResult's fields from required parameters
 
 ``` purescript
 newtype CreateRemoteAccessSessionConfiguration
-  = CreateRemoteAccessSessionConfiguration { billingMethod :: NullOrUndefined (BillingMethod) }
+  = CreateRemoteAccessSessionConfiguration { billingMethod :: Maybe (BillingMethod) }
 ```
 
 <p>Creates the configuration settings for a remote access session, including the device model and type.</p>
@@ -597,7 +597,7 @@ Constructs CreateRemoteAccessSessionConfiguration from required parameters
 #### `newCreateRemoteAccessSessionConfiguration'`
 
 ``` purescript
-newCreateRemoteAccessSessionConfiguration' :: ({ billingMethod :: NullOrUndefined (BillingMethod) } -> { billingMethod :: NullOrUndefined (BillingMethod) }) -> CreateRemoteAccessSessionConfiguration
+newCreateRemoteAccessSessionConfiguration' :: ({ billingMethod :: Maybe (BillingMethod) } -> { billingMethod :: Maybe (BillingMethod) }) -> CreateRemoteAccessSessionConfiguration
 ```
 
 Constructs CreateRemoteAccessSessionConfiguration's fields from required parameters
@@ -606,7 +606,7 @@ Constructs CreateRemoteAccessSessionConfiguration's fields from required paramet
 
 ``` purescript
 newtype CreateRemoteAccessSessionRequest
-  = CreateRemoteAccessSessionRequest { projectArn :: AmazonResourceName, deviceArn :: AmazonResourceName, sshPublicKey :: NullOrUndefined (SshPublicKey), remoteDebugEnabled :: NullOrUndefined (Boolean), remoteRecordEnabled :: NullOrUndefined (Boolean), remoteRecordAppArn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), clientId :: NullOrUndefined (ClientId), configuration :: NullOrUndefined (CreateRemoteAccessSessionConfiguration), interactionMode :: NullOrUndefined (InteractionMode) }
+  = CreateRemoteAccessSessionRequest { projectArn :: AmazonResourceName, deviceArn :: AmazonResourceName, sshPublicKey :: Maybe (SshPublicKey), remoteDebugEnabled :: Maybe (Boolean), remoteRecordEnabled :: Maybe (Boolean), remoteRecordAppArn :: Maybe (AmazonResourceName), name :: Maybe (Name), clientId :: Maybe (ClientId), configuration :: Maybe (CreateRemoteAccessSessionConfiguration), interactionMode :: Maybe (InteractionMode) }
 ```
 
 <p>Creates and submits a request to start a remote access session.</p>
@@ -631,7 +631,7 @@ Constructs CreateRemoteAccessSessionRequest from required parameters
 #### `newCreateRemoteAccessSessionRequest'`
 
 ``` purescript
-newCreateRemoteAccessSessionRequest' :: AmazonResourceName -> AmazonResourceName -> ({ projectArn :: AmazonResourceName, deviceArn :: AmazonResourceName, sshPublicKey :: NullOrUndefined (SshPublicKey), remoteDebugEnabled :: NullOrUndefined (Boolean), remoteRecordEnabled :: NullOrUndefined (Boolean), remoteRecordAppArn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), clientId :: NullOrUndefined (ClientId), configuration :: NullOrUndefined (CreateRemoteAccessSessionConfiguration), interactionMode :: NullOrUndefined (InteractionMode) } -> { projectArn :: AmazonResourceName, deviceArn :: AmazonResourceName, sshPublicKey :: NullOrUndefined (SshPublicKey), remoteDebugEnabled :: NullOrUndefined (Boolean), remoteRecordEnabled :: NullOrUndefined (Boolean), remoteRecordAppArn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), clientId :: NullOrUndefined (ClientId), configuration :: NullOrUndefined (CreateRemoteAccessSessionConfiguration), interactionMode :: NullOrUndefined (InteractionMode) }) -> CreateRemoteAccessSessionRequest
+newCreateRemoteAccessSessionRequest' :: AmazonResourceName -> AmazonResourceName -> ({ projectArn :: AmazonResourceName, deviceArn :: AmazonResourceName, sshPublicKey :: Maybe (SshPublicKey), remoteDebugEnabled :: Maybe (Boolean), remoteRecordEnabled :: Maybe (Boolean), remoteRecordAppArn :: Maybe (AmazonResourceName), name :: Maybe (Name), clientId :: Maybe (ClientId), configuration :: Maybe (CreateRemoteAccessSessionConfiguration), interactionMode :: Maybe (InteractionMode) } -> { projectArn :: AmazonResourceName, deviceArn :: AmazonResourceName, sshPublicKey :: Maybe (SshPublicKey), remoteDebugEnabled :: Maybe (Boolean), remoteRecordEnabled :: Maybe (Boolean), remoteRecordAppArn :: Maybe (AmazonResourceName), name :: Maybe (Name), clientId :: Maybe (ClientId), configuration :: Maybe (CreateRemoteAccessSessionConfiguration), interactionMode :: Maybe (InteractionMode) }) -> CreateRemoteAccessSessionRequest
 ```
 
 Constructs CreateRemoteAccessSessionRequest's fields from required parameters
@@ -640,7 +640,7 @@ Constructs CreateRemoteAccessSessionRequest's fields from required parameters
 
 ``` purescript
 newtype CreateRemoteAccessSessionResult
-  = CreateRemoteAccessSessionResult { remoteAccessSession :: NullOrUndefined (RemoteAccessSession) }
+  = CreateRemoteAccessSessionResult { remoteAccessSession :: Maybe (RemoteAccessSession) }
 ```
 
 <p>Represents the server response from a request to create a remote access session.</p>
@@ -665,7 +665,7 @@ Constructs CreateRemoteAccessSessionResult from required parameters
 #### `newCreateRemoteAccessSessionResult'`
 
 ``` purescript
-newCreateRemoteAccessSessionResult' :: ({ remoteAccessSession :: NullOrUndefined (RemoteAccessSession) } -> { remoteAccessSession :: NullOrUndefined (RemoteAccessSession) }) -> CreateRemoteAccessSessionResult
+newCreateRemoteAccessSessionResult' :: ({ remoteAccessSession :: Maybe (RemoteAccessSession) } -> { remoteAccessSession :: Maybe (RemoteAccessSession) }) -> CreateRemoteAccessSessionResult
 ```
 
 Constructs CreateRemoteAccessSessionResult's fields from required parameters
@@ -674,7 +674,7 @@ Constructs CreateRemoteAccessSessionResult's fields from required parameters
 
 ``` purescript
 newtype CreateUploadRequest
-  = CreateUploadRequest { projectArn :: AmazonResourceName, name :: Name, "type" :: UploadType, contentType :: NullOrUndefined (ContentType) }
+  = CreateUploadRequest { projectArn :: AmazonResourceName, name :: Name, "type" :: UploadType, contentType :: Maybe (ContentType) }
 ```
 
 <p>Represents a request to the create upload operation.</p>
@@ -699,7 +699,7 @@ Constructs CreateUploadRequest from required parameters
 #### `newCreateUploadRequest'`
 
 ``` purescript
-newCreateUploadRequest' :: Name -> AmazonResourceName -> UploadType -> ({ projectArn :: AmazonResourceName, name :: Name, "type" :: UploadType, contentType :: NullOrUndefined (ContentType) } -> { projectArn :: AmazonResourceName, name :: Name, "type" :: UploadType, contentType :: NullOrUndefined (ContentType) }) -> CreateUploadRequest
+newCreateUploadRequest' :: Name -> AmazonResourceName -> UploadType -> ({ projectArn :: AmazonResourceName, name :: Name, "type" :: UploadType, contentType :: Maybe (ContentType) } -> { projectArn :: AmazonResourceName, name :: Name, "type" :: UploadType, contentType :: Maybe (ContentType) }) -> CreateUploadRequest
 ```
 
 Constructs CreateUploadRequest's fields from required parameters
@@ -708,7 +708,7 @@ Constructs CreateUploadRequest's fields from required parameters
 
 ``` purescript
 newtype CreateUploadResult
-  = CreateUploadResult { upload :: NullOrUndefined (Upload) }
+  = CreateUploadResult { upload :: Maybe (Upload) }
 ```
 
 <p>Represents the result of a create upload request.</p>
@@ -733,7 +733,7 @@ Constructs CreateUploadResult from required parameters
 #### `newCreateUploadResult'`
 
 ``` purescript
-newCreateUploadResult' :: ({ upload :: NullOrUndefined (Upload) } -> { upload :: NullOrUndefined (Upload) }) -> CreateUploadResult
+newCreateUploadResult' :: ({ upload :: Maybe (Upload) } -> { upload :: Maybe (Upload) }) -> CreateUploadResult
 ```
 
 Constructs CreateUploadResult's fields from required parameters
@@ -758,7 +758,7 @@ Encode CurrencyCode
 
 ``` purescript
 newtype CustomerArtifactPaths
-  = CustomerArtifactPaths { iosPaths :: NullOrUndefined (IosPaths), androidPaths :: NullOrUndefined (AndroidPaths), deviceHostPaths :: NullOrUndefined (DeviceHostPaths) }
+  = CustomerArtifactPaths { iosPaths :: Maybe (IosPaths), androidPaths :: Maybe (AndroidPaths), deviceHostPaths :: Maybe (DeviceHostPaths) }
 ```
 
 <p>A JSON object specifying the paths where the artifacts generated by the customer's tests, on the device or in the test environment, will be pulled from.</p> <p>Specify <code>deviceHostPaths</code> and optionally specify either <code>iosPaths</code> or <code>androidPaths</code>.</p> <p>For web app tests, you can specify both <code>iosPaths</code> and <code>androidPaths</code>.</p>
@@ -783,7 +783,7 @@ Constructs CustomerArtifactPaths from required parameters
 #### `newCustomerArtifactPaths'`
 
 ``` purescript
-newCustomerArtifactPaths' :: ({ iosPaths :: NullOrUndefined (IosPaths), androidPaths :: NullOrUndefined (AndroidPaths), deviceHostPaths :: NullOrUndefined (DeviceHostPaths) } -> { iosPaths :: NullOrUndefined (IosPaths), androidPaths :: NullOrUndefined (AndroidPaths), deviceHostPaths :: NullOrUndefined (DeviceHostPaths) }) -> CustomerArtifactPaths
+newCustomerArtifactPaths' :: ({ iosPaths :: Maybe (IosPaths), androidPaths :: Maybe (AndroidPaths), deviceHostPaths :: Maybe (DeviceHostPaths) } -> { iosPaths :: Maybe (IosPaths), androidPaths :: Maybe (AndroidPaths), deviceHostPaths :: Maybe (DeviceHostPaths) }) -> CustomerArtifactPaths
 ```
 
 Constructs CustomerArtifactPaths's fields from required parameters
@@ -1116,7 +1116,7 @@ Encode DeleteUploadResult
 
 ``` purescript
 newtype Device
-  = Device { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), manufacturer :: NullOrUndefined (String), model :: NullOrUndefined (String), modelId :: NullOrUndefined (String), formFactor :: NullOrUndefined (DeviceFormFactor), platform :: NullOrUndefined (DevicePlatform), os :: NullOrUndefined (String), cpu :: NullOrUndefined (CPU), resolution :: NullOrUndefined (Resolution), heapSize :: NullOrUndefined (Number), memory :: NullOrUndefined (Number), image :: NullOrUndefined (String), carrier :: NullOrUndefined (String), radio :: NullOrUndefined (String), remoteAccessEnabled :: NullOrUndefined (Boolean), remoteDebugEnabled :: NullOrUndefined (Boolean), fleetType :: NullOrUndefined (String), fleetName :: NullOrUndefined (String) }
+  = Device { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), manufacturer :: Maybe (String), model :: Maybe (String), modelId :: Maybe (String), formFactor :: Maybe (DeviceFormFactor), platform :: Maybe (DevicePlatform), os :: Maybe (String), cpu :: Maybe (CPU), resolution :: Maybe (Resolution), heapSize :: Maybe (Number), memory :: Maybe (Number), image :: Maybe (String), carrier :: Maybe (String), radio :: Maybe (String), remoteAccessEnabled :: Maybe (Boolean), remoteDebugEnabled :: Maybe (Boolean), fleetType :: Maybe (String), fleetName :: Maybe (String) }
 ```
 
 <p>Represents a device type that an app is tested against.</p>
@@ -1141,7 +1141,7 @@ Constructs Device from required parameters
 #### `newDevice'`
 
 ``` purescript
-newDevice' :: ({ arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), manufacturer :: NullOrUndefined (String), model :: NullOrUndefined (String), modelId :: NullOrUndefined (String), formFactor :: NullOrUndefined (DeviceFormFactor), platform :: NullOrUndefined (DevicePlatform), os :: NullOrUndefined (String), cpu :: NullOrUndefined (CPU), resolution :: NullOrUndefined (Resolution), heapSize :: NullOrUndefined (Number), memory :: NullOrUndefined (Number), image :: NullOrUndefined (String), carrier :: NullOrUndefined (String), radio :: NullOrUndefined (String), remoteAccessEnabled :: NullOrUndefined (Boolean), remoteDebugEnabled :: NullOrUndefined (Boolean), fleetType :: NullOrUndefined (String), fleetName :: NullOrUndefined (String) } -> { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), manufacturer :: NullOrUndefined (String), model :: NullOrUndefined (String), modelId :: NullOrUndefined (String), formFactor :: NullOrUndefined (DeviceFormFactor), platform :: NullOrUndefined (DevicePlatform), os :: NullOrUndefined (String), cpu :: NullOrUndefined (CPU), resolution :: NullOrUndefined (Resolution), heapSize :: NullOrUndefined (Number), memory :: NullOrUndefined (Number), image :: NullOrUndefined (String), carrier :: NullOrUndefined (String), radio :: NullOrUndefined (String), remoteAccessEnabled :: NullOrUndefined (Boolean), remoteDebugEnabled :: NullOrUndefined (Boolean), fleetType :: NullOrUndefined (String), fleetName :: NullOrUndefined (String) }) -> Device
+newDevice' :: ({ arn :: Maybe (AmazonResourceName), name :: Maybe (Name), manufacturer :: Maybe (String), model :: Maybe (String), modelId :: Maybe (String), formFactor :: Maybe (DeviceFormFactor), platform :: Maybe (DevicePlatform), os :: Maybe (String), cpu :: Maybe (CPU), resolution :: Maybe (Resolution), heapSize :: Maybe (Number), memory :: Maybe (Number), image :: Maybe (String), carrier :: Maybe (String), radio :: Maybe (String), remoteAccessEnabled :: Maybe (Boolean), remoteDebugEnabled :: Maybe (Boolean), fleetType :: Maybe (String), fleetName :: Maybe (String) } -> { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), manufacturer :: Maybe (String), model :: Maybe (String), modelId :: Maybe (String), formFactor :: Maybe (DeviceFormFactor), platform :: Maybe (DevicePlatform), os :: Maybe (String), cpu :: Maybe (CPU), resolution :: Maybe (Resolution), heapSize :: Maybe (Number), memory :: Maybe (Number), image :: Maybe (String), carrier :: Maybe (String), radio :: Maybe (String), remoteAccessEnabled :: Maybe (Boolean), remoteDebugEnabled :: Maybe (Boolean), fleetType :: Maybe (String), fleetName :: Maybe (String) }) -> Device
 ```
 
 Constructs Device's fields from required parameters
@@ -1198,7 +1198,7 @@ Encode DeviceHostPaths
 
 ``` purescript
 newtype DeviceMinutes
-  = DeviceMinutes { total :: NullOrUndefined (Number), metered :: NullOrUndefined (Number), unmetered :: NullOrUndefined (Number) }
+  = DeviceMinutes { total :: Maybe (Number), metered :: Maybe (Number), unmetered :: Maybe (Number) }
 ```
 
 <p>Represents the total (metered or unmetered) minutes used by the resource to run tests. Contains the sum of minutes consumed by all children.</p>
@@ -1223,7 +1223,7 @@ Constructs DeviceMinutes from required parameters
 #### `newDeviceMinutes'`
 
 ``` purescript
-newDeviceMinutes' :: ({ total :: NullOrUndefined (Number), metered :: NullOrUndefined (Number), unmetered :: NullOrUndefined (Number) } -> { total :: NullOrUndefined (Number), metered :: NullOrUndefined (Number), unmetered :: NullOrUndefined (Number) }) -> DeviceMinutes
+newDeviceMinutes' :: ({ total :: Maybe (Number), metered :: Maybe (Number), unmetered :: Maybe (Number) } -> { total :: Maybe (Number), metered :: Maybe (Number), unmetered :: Maybe (Number) }) -> DeviceMinutes
 ```
 
 Constructs DeviceMinutes's fields from required parameters
@@ -1248,7 +1248,7 @@ Encode DevicePlatform
 
 ``` purescript
 newtype DevicePool
-  = DevicePool { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), description :: NullOrUndefined (Message), "type" :: NullOrUndefined (DevicePoolType), rules :: NullOrUndefined (Rules) }
+  = DevicePool { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), description :: Maybe (Message), "type" :: Maybe (DevicePoolType), rules :: Maybe (Rules) }
 ```
 
 <p>Represents a collection of device types.</p>
@@ -1273,7 +1273,7 @@ Constructs DevicePool from required parameters
 #### `newDevicePool'`
 
 ``` purescript
-newDevicePool' :: ({ arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), description :: NullOrUndefined (Message), "type" :: NullOrUndefined (DevicePoolType), rules :: NullOrUndefined (Rules) } -> { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), description :: NullOrUndefined (Message), "type" :: NullOrUndefined (DevicePoolType), rules :: NullOrUndefined (Rules) }) -> DevicePool
+newDevicePool' :: ({ arn :: Maybe (AmazonResourceName), name :: Maybe (Name), description :: Maybe (Message), "type" :: Maybe (DevicePoolType), rules :: Maybe (Rules) } -> { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), description :: Maybe (Message), "type" :: Maybe (DevicePoolType), rules :: Maybe (Rules) }) -> DevicePool
 ```
 
 Constructs DevicePool's fields from required parameters
@@ -1282,7 +1282,7 @@ Constructs DevicePool's fields from required parameters
 
 ``` purescript
 newtype DevicePoolCompatibilityResult
-  = DevicePoolCompatibilityResult { device :: NullOrUndefined (Device), compatible :: NullOrUndefined (Boolean), incompatibilityMessages :: NullOrUndefined (IncompatibilityMessages) }
+  = DevicePoolCompatibilityResult { device :: Maybe (Device), compatible :: Maybe (Boolean), incompatibilityMessages :: Maybe (IncompatibilityMessages) }
 ```
 
 <p>Represents a device pool compatibility result.</p>
@@ -1307,7 +1307,7 @@ Constructs DevicePoolCompatibilityResult from required parameters
 #### `newDevicePoolCompatibilityResult'`
 
 ``` purescript
-newDevicePoolCompatibilityResult' :: ({ device :: NullOrUndefined (Device), compatible :: NullOrUndefined (Boolean), incompatibilityMessages :: NullOrUndefined (IncompatibilityMessages) } -> { device :: NullOrUndefined (Device), compatible :: NullOrUndefined (Boolean), incompatibilityMessages :: NullOrUndefined (IncompatibilityMessages) }) -> DevicePoolCompatibilityResult
+newDevicePoolCompatibilityResult' :: ({ device :: Maybe (Device), compatible :: Maybe (Boolean), incompatibilityMessages :: Maybe (IncompatibilityMessages) } -> { device :: Maybe (Device), compatible :: Maybe (Boolean), incompatibilityMessages :: Maybe (IncompatibilityMessages) }) -> DevicePoolCompatibilityResult
 ```
 
 Constructs DevicePoolCompatibilityResult's fields from required parameters
@@ -1380,7 +1380,7 @@ Encode Devices
 
 ``` purescript
 newtype ExecutionConfiguration
-  = ExecutionConfiguration { jobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes), accountsCleanup :: NullOrUndefined (AccountsCleanup), appPackagesCleanup :: NullOrUndefined (AppPackagesCleanup) }
+  = ExecutionConfiguration { jobTimeoutMinutes :: Maybe (JobTimeoutMinutes), accountsCleanup :: Maybe (AccountsCleanup), appPackagesCleanup :: Maybe (AppPackagesCleanup) }
 ```
 
 <p>Represents configuration information about a test run, such as the execution timeout (in minutes).</p>
@@ -1405,7 +1405,7 @@ Constructs ExecutionConfiguration from required parameters
 #### `newExecutionConfiguration'`
 
 ``` purescript
-newExecutionConfiguration' :: ({ jobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes), accountsCleanup :: NullOrUndefined (AccountsCleanup), appPackagesCleanup :: NullOrUndefined (AppPackagesCleanup) } -> { jobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes), accountsCleanup :: NullOrUndefined (AccountsCleanup), appPackagesCleanup :: NullOrUndefined (AppPackagesCleanup) }) -> ExecutionConfiguration
+newExecutionConfiguration' :: ({ jobTimeoutMinutes :: Maybe (JobTimeoutMinutes), accountsCleanup :: Maybe (AccountsCleanup), appPackagesCleanup :: Maybe (AppPackagesCleanup) } -> { jobTimeoutMinutes :: Maybe (JobTimeoutMinutes), accountsCleanup :: Maybe (AccountsCleanup), appPackagesCleanup :: Maybe (AppPackagesCleanup) }) -> ExecutionConfiguration
 ```
 
 Constructs ExecutionConfiguration's fields from required parameters
@@ -1496,7 +1496,7 @@ Encode GetAccountSettingsRequest
 
 ``` purescript
 newtype GetAccountSettingsResult
-  = GetAccountSettingsResult { accountSettings :: NullOrUndefined (AccountSettings) }
+  = GetAccountSettingsResult { accountSettings :: Maybe (AccountSettings) }
 ```
 
 <p>Represents the account settings return values from the <code>GetAccountSettings</code> request.</p>
@@ -1521,7 +1521,7 @@ Constructs GetAccountSettingsResult from required parameters
 #### `newGetAccountSettingsResult'`
 
 ``` purescript
-newGetAccountSettingsResult' :: ({ accountSettings :: NullOrUndefined (AccountSettings) } -> { accountSettings :: NullOrUndefined (AccountSettings) }) -> GetAccountSettingsResult
+newGetAccountSettingsResult' :: ({ accountSettings :: Maybe (AccountSettings) } -> { accountSettings :: Maybe (AccountSettings) }) -> GetAccountSettingsResult
 ```
 
 Constructs GetAccountSettingsResult's fields from required parameters
@@ -1530,7 +1530,7 @@ Constructs GetAccountSettingsResult's fields from required parameters
 
 ``` purescript
 newtype GetDevicePoolCompatibilityRequest
-  = GetDevicePoolCompatibilityRequest { devicePoolArn :: AmazonResourceName, appArn :: NullOrUndefined (AmazonResourceName), testType :: NullOrUndefined (TestType), test :: NullOrUndefined (ScheduleRunTest) }
+  = GetDevicePoolCompatibilityRequest { devicePoolArn :: AmazonResourceName, appArn :: Maybe (AmazonResourceName), testType :: Maybe (TestType), test :: Maybe (ScheduleRunTest) }
 ```
 
 <p>Represents a request to the get device pool compatibility operation.</p>
@@ -1555,7 +1555,7 @@ Constructs GetDevicePoolCompatibilityRequest from required parameters
 #### `newGetDevicePoolCompatibilityRequest'`
 
 ``` purescript
-newGetDevicePoolCompatibilityRequest' :: AmazonResourceName -> ({ devicePoolArn :: AmazonResourceName, appArn :: NullOrUndefined (AmazonResourceName), testType :: NullOrUndefined (TestType), test :: NullOrUndefined (ScheduleRunTest) } -> { devicePoolArn :: AmazonResourceName, appArn :: NullOrUndefined (AmazonResourceName), testType :: NullOrUndefined (TestType), test :: NullOrUndefined (ScheduleRunTest) }) -> GetDevicePoolCompatibilityRequest
+newGetDevicePoolCompatibilityRequest' :: AmazonResourceName -> ({ devicePoolArn :: AmazonResourceName, appArn :: Maybe (AmazonResourceName), testType :: Maybe (TestType), test :: Maybe (ScheduleRunTest) } -> { devicePoolArn :: AmazonResourceName, appArn :: Maybe (AmazonResourceName), testType :: Maybe (TestType), test :: Maybe (ScheduleRunTest) }) -> GetDevicePoolCompatibilityRequest
 ```
 
 Constructs GetDevicePoolCompatibilityRequest's fields from required parameters
@@ -1564,7 +1564,7 @@ Constructs GetDevicePoolCompatibilityRequest's fields from required parameters
 
 ``` purescript
 newtype GetDevicePoolCompatibilityResult
-  = GetDevicePoolCompatibilityResult { compatibleDevices :: NullOrUndefined (DevicePoolCompatibilityResults), incompatibleDevices :: NullOrUndefined (DevicePoolCompatibilityResults) }
+  = GetDevicePoolCompatibilityResult { compatibleDevices :: Maybe (DevicePoolCompatibilityResults), incompatibleDevices :: Maybe (DevicePoolCompatibilityResults) }
 ```
 
 <p>Represents the result of describe device pool compatibility request.</p>
@@ -1589,7 +1589,7 @@ Constructs GetDevicePoolCompatibilityResult from required parameters
 #### `newGetDevicePoolCompatibilityResult'`
 
 ``` purescript
-newGetDevicePoolCompatibilityResult' :: ({ compatibleDevices :: NullOrUndefined (DevicePoolCompatibilityResults), incompatibleDevices :: NullOrUndefined (DevicePoolCompatibilityResults) } -> { compatibleDevices :: NullOrUndefined (DevicePoolCompatibilityResults), incompatibleDevices :: NullOrUndefined (DevicePoolCompatibilityResults) }) -> GetDevicePoolCompatibilityResult
+newGetDevicePoolCompatibilityResult' :: ({ compatibleDevices :: Maybe (DevicePoolCompatibilityResults), incompatibleDevices :: Maybe (DevicePoolCompatibilityResults) } -> { compatibleDevices :: Maybe (DevicePoolCompatibilityResults), incompatibleDevices :: Maybe (DevicePoolCompatibilityResults) }) -> GetDevicePoolCompatibilityResult
 ```
 
 Constructs GetDevicePoolCompatibilityResult's fields from required parameters
@@ -1632,7 +1632,7 @@ Constructs GetDevicePoolRequest's fields from required parameters
 
 ``` purescript
 newtype GetDevicePoolResult
-  = GetDevicePoolResult { devicePool :: NullOrUndefined (DevicePool) }
+  = GetDevicePoolResult { devicePool :: Maybe (DevicePool) }
 ```
 
 <p>Represents the result of a get device pool request.</p>
@@ -1657,7 +1657,7 @@ Constructs GetDevicePoolResult from required parameters
 #### `newGetDevicePoolResult'`
 
 ``` purescript
-newGetDevicePoolResult' :: ({ devicePool :: NullOrUndefined (DevicePool) } -> { devicePool :: NullOrUndefined (DevicePool) }) -> GetDevicePoolResult
+newGetDevicePoolResult' :: ({ devicePool :: Maybe (DevicePool) } -> { devicePool :: Maybe (DevicePool) }) -> GetDevicePoolResult
 ```
 
 Constructs GetDevicePoolResult's fields from required parameters
@@ -1700,7 +1700,7 @@ Constructs GetDeviceRequest's fields from required parameters
 
 ``` purescript
 newtype GetDeviceResult
-  = GetDeviceResult { device :: NullOrUndefined (Device) }
+  = GetDeviceResult { device :: Maybe (Device) }
 ```
 
 <p>Represents the result of a get device request.</p>
@@ -1725,7 +1725,7 @@ Constructs GetDeviceResult from required parameters
 #### `newGetDeviceResult'`
 
 ``` purescript
-newGetDeviceResult' :: ({ device :: NullOrUndefined (Device) } -> { device :: NullOrUndefined (Device) }) -> GetDeviceResult
+newGetDeviceResult' :: ({ device :: Maybe (Device) } -> { device :: Maybe (Device) }) -> GetDeviceResult
 ```
 
 Constructs GetDeviceResult's fields from required parameters
@@ -1768,7 +1768,7 @@ Constructs GetJobRequest's fields from required parameters
 
 ``` purescript
 newtype GetJobResult
-  = GetJobResult { job :: NullOrUndefined (Job) }
+  = GetJobResult { job :: Maybe (Job) }
 ```
 
 <p>Represents the result of a get job request.</p>
@@ -1793,7 +1793,7 @@ Constructs GetJobResult from required parameters
 #### `newGetJobResult'`
 
 ``` purescript
-newGetJobResult' :: ({ job :: NullOrUndefined (Job) } -> { job :: NullOrUndefined (Job) }) -> GetJobResult
+newGetJobResult' :: ({ job :: Maybe (Job) } -> { job :: Maybe (Job) }) -> GetJobResult
 ```
 
 Constructs GetJobResult's fields from required parameters
@@ -1834,7 +1834,7 @@ Constructs GetNetworkProfileRequest's fields from required parameters
 
 ``` purescript
 newtype GetNetworkProfileResult
-  = GetNetworkProfileResult { networkProfile :: NullOrUndefined (NetworkProfile) }
+  = GetNetworkProfileResult { networkProfile :: Maybe (NetworkProfile) }
 ```
 
 ##### Instances
@@ -1857,7 +1857,7 @@ Constructs GetNetworkProfileResult from required parameters
 #### `newGetNetworkProfileResult'`
 
 ``` purescript
-newGetNetworkProfileResult' :: ({ networkProfile :: NullOrUndefined (NetworkProfile) } -> { networkProfile :: NullOrUndefined (NetworkProfile) }) -> GetNetworkProfileResult
+newGetNetworkProfileResult' :: ({ networkProfile :: Maybe (NetworkProfile) } -> { networkProfile :: Maybe (NetworkProfile) }) -> GetNetworkProfileResult
 ```
 
 Constructs GetNetworkProfileResult's fields from required parameters
@@ -1866,7 +1866,7 @@ Constructs GetNetworkProfileResult's fields from required parameters
 
 ``` purescript
 newtype GetOfferingStatusRequest
-  = GetOfferingStatusRequest { nextToken :: NullOrUndefined (PaginationToken) }
+  = GetOfferingStatusRequest { nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the request to retrieve the offering status for the specified customer or account.</p>
@@ -1891,7 +1891,7 @@ Constructs GetOfferingStatusRequest from required parameters
 #### `newGetOfferingStatusRequest'`
 
 ``` purescript
-newGetOfferingStatusRequest' :: ({ nextToken :: NullOrUndefined (PaginationToken) } -> { nextToken :: NullOrUndefined (PaginationToken) }) -> GetOfferingStatusRequest
+newGetOfferingStatusRequest' :: ({ nextToken :: Maybe (PaginationToken) } -> { nextToken :: Maybe (PaginationToken) }) -> GetOfferingStatusRequest
 ```
 
 Constructs GetOfferingStatusRequest's fields from required parameters
@@ -1900,7 +1900,7 @@ Constructs GetOfferingStatusRequest's fields from required parameters
 
 ``` purescript
 newtype GetOfferingStatusResult
-  = GetOfferingStatusResult { current :: NullOrUndefined (OfferingStatusMap), nextPeriod :: NullOrUndefined (OfferingStatusMap), nextToken :: NullOrUndefined (PaginationToken) }
+  = GetOfferingStatusResult { current :: Maybe (OfferingStatusMap), nextPeriod :: Maybe (OfferingStatusMap), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Returns the status result for a device offering.</p>
@@ -1925,7 +1925,7 @@ Constructs GetOfferingStatusResult from required parameters
 #### `newGetOfferingStatusResult'`
 
 ``` purescript
-newGetOfferingStatusResult' :: ({ current :: NullOrUndefined (OfferingStatusMap), nextPeriod :: NullOrUndefined (OfferingStatusMap), nextToken :: NullOrUndefined (PaginationToken) } -> { current :: NullOrUndefined (OfferingStatusMap), nextPeriod :: NullOrUndefined (OfferingStatusMap), nextToken :: NullOrUndefined (PaginationToken) }) -> GetOfferingStatusResult
+newGetOfferingStatusResult' :: ({ current :: Maybe (OfferingStatusMap), nextPeriod :: Maybe (OfferingStatusMap), nextToken :: Maybe (PaginationToken) } -> { current :: Maybe (OfferingStatusMap), nextPeriod :: Maybe (OfferingStatusMap), nextToken :: Maybe (PaginationToken) }) -> GetOfferingStatusResult
 ```
 
 Constructs GetOfferingStatusResult's fields from required parameters
@@ -1968,7 +1968,7 @@ Constructs GetProjectRequest's fields from required parameters
 
 ``` purescript
 newtype GetProjectResult
-  = GetProjectResult { project :: NullOrUndefined (Project) }
+  = GetProjectResult { project :: Maybe (Project) }
 ```
 
 <p>Represents the result of a get project request.</p>
@@ -1993,7 +1993,7 @@ Constructs GetProjectResult from required parameters
 #### `newGetProjectResult'`
 
 ``` purescript
-newGetProjectResult' :: ({ project :: NullOrUndefined (Project) } -> { project :: NullOrUndefined (Project) }) -> GetProjectResult
+newGetProjectResult' :: ({ project :: Maybe (Project) } -> { project :: Maybe (Project) }) -> GetProjectResult
 ```
 
 Constructs GetProjectResult's fields from required parameters
@@ -2036,7 +2036,7 @@ Constructs GetRemoteAccessSessionRequest's fields from required parameters
 
 ``` purescript
 newtype GetRemoteAccessSessionResult
-  = GetRemoteAccessSessionResult { remoteAccessSession :: NullOrUndefined (RemoteAccessSession) }
+  = GetRemoteAccessSessionResult { remoteAccessSession :: Maybe (RemoteAccessSession) }
 ```
 
 <p>Represents the response from the server that lists detailed information about the remote access session.</p>
@@ -2061,7 +2061,7 @@ Constructs GetRemoteAccessSessionResult from required parameters
 #### `newGetRemoteAccessSessionResult'`
 
 ``` purescript
-newGetRemoteAccessSessionResult' :: ({ remoteAccessSession :: NullOrUndefined (RemoteAccessSession) } -> { remoteAccessSession :: NullOrUndefined (RemoteAccessSession) }) -> GetRemoteAccessSessionResult
+newGetRemoteAccessSessionResult' :: ({ remoteAccessSession :: Maybe (RemoteAccessSession) } -> { remoteAccessSession :: Maybe (RemoteAccessSession) }) -> GetRemoteAccessSessionResult
 ```
 
 Constructs GetRemoteAccessSessionResult's fields from required parameters
@@ -2104,7 +2104,7 @@ Constructs GetRunRequest's fields from required parameters
 
 ``` purescript
 newtype GetRunResult
-  = GetRunResult { run :: NullOrUndefined (Run) }
+  = GetRunResult { run :: Maybe (Run) }
 ```
 
 <p>Represents the result of a get run request.</p>
@@ -2129,7 +2129,7 @@ Constructs GetRunResult from required parameters
 #### `newGetRunResult'`
 
 ``` purescript
-newGetRunResult' :: ({ run :: NullOrUndefined (Run) } -> { run :: NullOrUndefined (Run) }) -> GetRunResult
+newGetRunResult' :: ({ run :: Maybe (Run) } -> { run :: Maybe (Run) }) -> GetRunResult
 ```
 
 Constructs GetRunResult's fields from required parameters
@@ -2172,7 +2172,7 @@ Constructs GetSuiteRequest's fields from required parameters
 
 ``` purescript
 newtype GetSuiteResult
-  = GetSuiteResult { suite :: NullOrUndefined (Suite) }
+  = GetSuiteResult { suite :: Maybe (Suite) }
 ```
 
 <p>Represents the result of a get suite request.</p>
@@ -2197,7 +2197,7 @@ Constructs GetSuiteResult from required parameters
 #### `newGetSuiteResult'`
 
 ``` purescript
-newGetSuiteResult' :: ({ suite :: NullOrUndefined (Suite) } -> { suite :: NullOrUndefined (Suite) }) -> GetSuiteResult
+newGetSuiteResult' :: ({ suite :: Maybe (Suite) } -> { suite :: Maybe (Suite) }) -> GetSuiteResult
 ```
 
 Constructs GetSuiteResult's fields from required parameters
@@ -2240,7 +2240,7 @@ Constructs GetTestRequest's fields from required parameters
 
 ``` purescript
 newtype GetTestResult
-  = GetTestResult { test :: NullOrUndefined (Test) }
+  = GetTestResult { test :: Maybe (Test) }
 ```
 
 <p>Represents the result of a get test request.</p>
@@ -2265,7 +2265,7 @@ Constructs GetTestResult from required parameters
 #### `newGetTestResult'`
 
 ``` purescript
-newGetTestResult' :: ({ test :: NullOrUndefined (Test) } -> { test :: NullOrUndefined (Test) }) -> GetTestResult
+newGetTestResult' :: ({ test :: Maybe (Test) } -> { test :: Maybe (Test) }) -> GetTestResult
 ```
 
 Constructs GetTestResult's fields from required parameters
@@ -2308,7 +2308,7 @@ Constructs GetUploadRequest's fields from required parameters
 
 ``` purescript
 newtype GetUploadResult
-  = GetUploadResult { upload :: NullOrUndefined (Upload) }
+  = GetUploadResult { upload :: Maybe (Upload) }
 ```
 
 <p>Represents the result of a get upload request.</p>
@@ -2333,7 +2333,7 @@ Constructs GetUploadResult from required parameters
 #### `newGetUploadResult'`
 
 ``` purescript
-newGetUploadResult' :: ({ upload :: NullOrUndefined (Upload) } -> { upload :: NullOrUndefined (Upload) }) -> GetUploadResult
+newGetUploadResult' :: ({ upload :: Maybe (Upload) } -> { upload :: Maybe (Upload) }) -> GetUploadResult
 ```
 
 Constructs GetUploadResult's fields from required parameters
@@ -2358,7 +2358,7 @@ Encode HostAddress
 
 ``` purescript
 newtype IdempotencyException
-  = IdempotencyException { message :: NullOrUndefined (Message) }
+  = IdempotencyException { message :: Maybe (Message) }
 ```
 
 <p>An entity with the same name already exists.</p>
@@ -2383,7 +2383,7 @@ Constructs IdempotencyException from required parameters
 #### `newIdempotencyException'`
 
 ``` purescript
-newIdempotencyException' :: ({ message :: NullOrUndefined (Message) } -> { message :: NullOrUndefined (Message) }) -> IdempotencyException
+newIdempotencyException' :: ({ message :: Maybe (Message) } -> { message :: Maybe (Message) }) -> IdempotencyException
 ```
 
 Constructs IdempotencyException's fields from required parameters
@@ -2392,7 +2392,7 @@ Constructs IdempotencyException's fields from required parameters
 
 ``` purescript
 newtype IncompatibilityMessage
-  = IncompatibilityMessage { message :: NullOrUndefined (Message), "type" :: NullOrUndefined (DeviceAttribute) }
+  = IncompatibilityMessage { message :: Maybe (Message), "type" :: Maybe (DeviceAttribute) }
 ```
 
 <p>Represents information about incompatibility.</p>
@@ -2417,7 +2417,7 @@ Constructs IncompatibilityMessage from required parameters
 #### `newIncompatibilityMessage'`
 
 ``` purescript
-newIncompatibilityMessage' :: ({ message :: NullOrUndefined (Message), "type" :: NullOrUndefined (DeviceAttribute) } -> { message :: NullOrUndefined (Message), "type" :: NullOrUndefined (DeviceAttribute) }) -> IncompatibilityMessage
+newIncompatibilityMessage' :: ({ message :: Maybe (Message), "type" :: Maybe (DeviceAttribute) } -> { message :: Maybe (Message), "type" :: Maybe (DeviceAttribute) }) -> IncompatibilityMessage
 ```
 
 Constructs IncompatibilityMessage's fields from required parameters
@@ -2476,7 +2476,7 @@ Constructs InstallToRemoteAccessSessionRequest's fields from required parameters
 
 ``` purescript
 newtype InstallToRemoteAccessSessionResult
-  = InstallToRemoteAccessSessionResult { appUpload :: NullOrUndefined (Upload) }
+  = InstallToRemoteAccessSessionResult { appUpload :: Maybe (Upload) }
 ```
 
 <p>Represents the response from the server after AWS Device Farm makes a request to install to a remote access session.</p>
@@ -2501,7 +2501,7 @@ Constructs InstallToRemoteAccessSessionResult from required parameters
 #### `newInstallToRemoteAccessSessionResult'`
 
 ``` purescript
-newInstallToRemoteAccessSessionResult' :: ({ appUpload :: NullOrUndefined (Upload) } -> { appUpload :: NullOrUndefined (Upload) }) -> InstallToRemoteAccessSessionResult
+newInstallToRemoteAccessSessionResult' :: ({ appUpload :: Maybe (Upload) } -> { appUpload :: Maybe (Upload) }) -> InstallToRemoteAccessSessionResult
 ```
 
 Constructs InstallToRemoteAccessSessionResult's fields from required parameters
@@ -2542,7 +2542,7 @@ Encode IosPaths
 
 ``` purescript
 newtype Job
-  = Job { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), "type" :: NullOrUndefined (TestType), created :: NullOrUndefined (DateTime), status :: NullOrUndefined (ExecutionStatus), result :: NullOrUndefined (ExecutionResult), started :: NullOrUndefined (DateTime), stopped :: NullOrUndefined (DateTime), counters :: NullOrUndefined (Counters), message :: NullOrUndefined (Message), device :: NullOrUndefined (Device), deviceMinutes :: NullOrUndefined (DeviceMinutes) }
+  = Job { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), "type" :: Maybe (TestType), created :: Maybe (DateTime), status :: Maybe (ExecutionStatus), result :: Maybe (ExecutionResult), started :: Maybe (DateTime), stopped :: Maybe (DateTime), counters :: Maybe (Counters), message :: Maybe (Message), device :: Maybe (Device), deviceMinutes :: Maybe (DeviceMinutes) }
 ```
 
 <p>Represents a device.</p>
@@ -2567,7 +2567,7 @@ Constructs Job from required parameters
 #### `newJob'`
 
 ``` purescript
-newJob' :: ({ arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), "type" :: NullOrUndefined (TestType), created :: NullOrUndefined (DateTime), status :: NullOrUndefined (ExecutionStatus), result :: NullOrUndefined (ExecutionResult), started :: NullOrUndefined (DateTime), stopped :: NullOrUndefined (DateTime), counters :: NullOrUndefined (Counters), message :: NullOrUndefined (Message), device :: NullOrUndefined (Device), deviceMinutes :: NullOrUndefined (DeviceMinutes) } -> { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), "type" :: NullOrUndefined (TestType), created :: NullOrUndefined (DateTime), status :: NullOrUndefined (ExecutionStatus), result :: NullOrUndefined (ExecutionResult), started :: NullOrUndefined (DateTime), stopped :: NullOrUndefined (DateTime), counters :: NullOrUndefined (Counters), message :: NullOrUndefined (Message), device :: NullOrUndefined (Device), deviceMinutes :: NullOrUndefined (DeviceMinutes) }) -> Job
+newJob' :: ({ arn :: Maybe (AmazonResourceName), name :: Maybe (Name), "type" :: Maybe (TestType), created :: Maybe (DateTime), status :: Maybe (ExecutionStatus), result :: Maybe (ExecutionResult), started :: Maybe (DateTime), stopped :: Maybe (DateTime), counters :: Maybe (Counters), message :: Maybe (Message), device :: Maybe (Device), deviceMinutes :: Maybe (DeviceMinutes) } -> { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), "type" :: Maybe (TestType), created :: Maybe (DateTime), status :: Maybe (ExecutionStatus), result :: Maybe (ExecutionResult), started :: Maybe (DateTime), stopped :: Maybe (DateTime), counters :: Maybe (Counters), message :: Maybe (Message), device :: Maybe (Device), deviceMinutes :: Maybe (DeviceMinutes) }) -> Job
 ```
 
 Constructs Job's fields from required parameters
@@ -2608,7 +2608,7 @@ Encode Jobs
 
 ``` purescript
 newtype LimitExceededException
-  = LimitExceededException { message :: NullOrUndefined (Message) }
+  = LimitExceededException { message :: Maybe (Message) }
 ```
 
 <p>A limit was exceeded.</p>
@@ -2633,7 +2633,7 @@ Constructs LimitExceededException from required parameters
 #### `newLimitExceededException'`
 
 ``` purescript
-newLimitExceededException' :: ({ message :: NullOrUndefined (Message) } -> { message :: NullOrUndefined (Message) }) -> LimitExceededException
+newLimitExceededException' :: ({ message :: Maybe (Message) } -> { message :: Maybe (Message) }) -> LimitExceededException
 ```
 
 Constructs LimitExceededException's fields from required parameters
@@ -2642,7 +2642,7 @@ Constructs LimitExceededException's fields from required parameters
 
 ``` purescript
 newtype ListArtifactsRequest
-  = ListArtifactsRequest { arn :: AmazonResourceName, "type" :: ArtifactCategory, nextToken :: NullOrUndefined (PaginationToken) }
+  = ListArtifactsRequest { arn :: AmazonResourceName, "type" :: ArtifactCategory, nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents a request to the list artifacts operation.</p>
@@ -2667,7 +2667,7 @@ Constructs ListArtifactsRequest from required parameters
 #### `newListArtifactsRequest'`
 
 ``` purescript
-newListArtifactsRequest' :: AmazonResourceName -> ArtifactCategory -> ({ arn :: AmazonResourceName, "type" :: ArtifactCategory, nextToken :: NullOrUndefined (PaginationToken) } -> { arn :: AmazonResourceName, "type" :: ArtifactCategory, nextToken :: NullOrUndefined (PaginationToken) }) -> ListArtifactsRequest
+newListArtifactsRequest' :: AmazonResourceName -> ArtifactCategory -> ({ arn :: AmazonResourceName, "type" :: ArtifactCategory, nextToken :: Maybe (PaginationToken) } -> { arn :: AmazonResourceName, "type" :: ArtifactCategory, nextToken :: Maybe (PaginationToken) }) -> ListArtifactsRequest
 ```
 
 Constructs ListArtifactsRequest's fields from required parameters
@@ -2676,7 +2676,7 @@ Constructs ListArtifactsRequest's fields from required parameters
 
 ``` purescript
 newtype ListArtifactsResult
-  = ListArtifactsResult { artifacts :: NullOrUndefined (Artifacts), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListArtifactsResult { artifacts :: Maybe (Artifacts), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the result of a list artifacts operation.</p>
@@ -2701,7 +2701,7 @@ Constructs ListArtifactsResult from required parameters
 #### `newListArtifactsResult'`
 
 ``` purescript
-newListArtifactsResult' :: ({ artifacts :: NullOrUndefined (Artifacts), nextToken :: NullOrUndefined (PaginationToken) } -> { artifacts :: NullOrUndefined (Artifacts), nextToken :: NullOrUndefined (PaginationToken) }) -> ListArtifactsResult
+newListArtifactsResult' :: ({ artifacts :: Maybe (Artifacts), nextToken :: Maybe (PaginationToken) } -> { artifacts :: Maybe (Artifacts), nextToken :: Maybe (PaginationToken) }) -> ListArtifactsResult
 ```
 
 Constructs ListArtifactsResult's fields from required parameters
@@ -2710,7 +2710,7 @@ Constructs ListArtifactsResult's fields from required parameters
 
 ``` purescript
 newtype ListDevicePoolsRequest
-  = ListDevicePoolsRequest { arn :: AmazonResourceName, "type" :: NullOrUndefined (DevicePoolType), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListDevicePoolsRequest { arn :: AmazonResourceName, "type" :: Maybe (DevicePoolType), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the result of a list device pools request.</p>
@@ -2735,7 +2735,7 @@ Constructs ListDevicePoolsRequest from required parameters
 #### `newListDevicePoolsRequest'`
 
 ``` purescript
-newListDevicePoolsRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, "type" :: NullOrUndefined (DevicePoolType), nextToken :: NullOrUndefined (PaginationToken) } -> { arn :: AmazonResourceName, "type" :: NullOrUndefined (DevicePoolType), nextToken :: NullOrUndefined (PaginationToken) }) -> ListDevicePoolsRequest
+newListDevicePoolsRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, "type" :: Maybe (DevicePoolType), nextToken :: Maybe (PaginationToken) } -> { arn :: AmazonResourceName, "type" :: Maybe (DevicePoolType), nextToken :: Maybe (PaginationToken) }) -> ListDevicePoolsRequest
 ```
 
 Constructs ListDevicePoolsRequest's fields from required parameters
@@ -2744,7 +2744,7 @@ Constructs ListDevicePoolsRequest's fields from required parameters
 
 ``` purescript
 newtype ListDevicePoolsResult
-  = ListDevicePoolsResult { devicePools :: NullOrUndefined (DevicePools), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListDevicePoolsResult { devicePools :: Maybe (DevicePools), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the result of a list device pools request.</p>
@@ -2769,7 +2769,7 @@ Constructs ListDevicePoolsResult from required parameters
 #### `newListDevicePoolsResult'`
 
 ``` purescript
-newListDevicePoolsResult' :: ({ devicePools :: NullOrUndefined (DevicePools), nextToken :: NullOrUndefined (PaginationToken) } -> { devicePools :: NullOrUndefined (DevicePools), nextToken :: NullOrUndefined (PaginationToken) }) -> ListDevicePoolsResult
+newListDevicePoolsResult' :: ({ devicePools :: Maybe (DevicePools), nextToken :: Maybe (PaginationToken) } -> { devicePools :: Maybe (DevicePools), nextToken :: Maybe (PaginationToken) }) -> ListDevicePoolsResult
 ```
 
 Constructs ListDevicePoolsResult's fields from required parameters
@@ -2778,7 +2778,7 @@ Constructs ListDevicePoolsResult's fields from required parameters
 
 ``` purescript
 newtype ListDevicesRequest
-  = ListDevicesRequest { arn :: NullOrUndefined (AmazonResourceName), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListDevicesRequest { arn :: Maybe (AmazonResourceName), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the result of a list devices request.</p>
@@ -2803,7 +2803,7 @@ Constructs ListDevicesRequest from required parameters
 #### `newListDevicesRequest'`
 
 ``` purescript
-newListDevicesRequest' :: ({ arn :: NullOrUndefined (AmazonResourceName), nextToken :: NullOrUndefined (PaginationToken) } -> { arn :: NullOrUndefined (AmazonResourceName), nextToken :: NullOrUndefined (PaginationToken) }) -> ListDevicesRequest
+newListDevicesRequest' :: ({ arn :: Maybe (AmazonResourceName), nextToken :: Maybe (PaginationToken) } -> { arn :: Maybe (AmazonResourceName), nextToken :: Maybe (PaginationToken) }) -> ListDevicesRequest
 ```
 
 Constructs ListDevicesRequest's fields from required parameters
@@ -2812,7 +2812,7 @@ Constructs ListDevicesRequest's fields from required parameters
 
 ``` purescript
 newtype ListDevicesResult
-  = ListDevicesResult { devices :: NullOrUndefined (Devices), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListDevicesResult { devices :: Maybe (Devices), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the result of a list devices operation.</p>
@@ -2837,7 +2837,7 @@ Constructs ListDevicesResult from required parameters
 #### `newListDevicesResult'`
 
 ``` purescript
-newListDevicesResult' :: ({ devices :: NullOrUndefined (Devices), nextToken :: NullOrUndefined (PaginationToken) } -> { devices :: NullOrUndefined (Devices), nextToken :: NullOrUndefined (PaginationToken) }) -> ListDevicesResult
+newListDevicesResult' :: ({ devices :: Maybe (Devices), nextToken :: Maybe (PaginationToken) } -> { devices :: Maybe (Devices), nextToken :: Maybe (PaginationToken) }) -> ListDevicesResult
 ```
 
 Constructs ListDevicesResult's fields from required parameters
@@ -2846,7 +2846,7 @@ Constructs ListDevicesResult's fields from required parameters
 
 ``` purescript
 newtype ListJobsRequest
-  = ListJobsRequest { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }
+  = ListJobsRequest { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents a request to the list jobs operation.</p>
@@ -2871,7 +2871,7 @@ Constructs ListJobsRequest from required parameters
 #### `newListJobsRequest'`
 
 ``` purescript
-newListJobsRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }) -> ListJobsRequest
+newListJobsRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }) -> ListJobsRequest
 ```
 
 Constructs ListJobsRequest's fields from required parameters
@@ -2880,7 +2880,7 @@ Constructs ListJobsRequest's fields from required parameters
 
 ``` purescript
 newtype ListJobsResult
-  = ListJobsResult { jobs :: NullOrUndefined (Jobs), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListJobsResult { jobs :: Maybe (Jobs), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the result of a list jobs request.</p>
@@ -2905,7 +2905,7 @@ Constructs ListJobsResult from required parameters
 #### `newListJobsResult'`
 
 ``` purescript
-newListJobsResult' :: ({ jobs :: NullOrUndefined (Jobs), nextToken :: NullOrUndefined (PaginationToken) } -> { jobs :: NullOrUndefined (Jobs), nextToken :: NullOrUndefined (PaginationToken) }) -> ListJobsResult
+newListJobsResult' :: ({ jobs :: Maybe (Jobs), nextToken :: Maybe (PaginationToken) } -> { jobs :: Maybe (Jobs), nextToken :: Maybe (PaginationToken) }) -> ListJobsResult
 ```
 
 Constructs ListJobsResult's fields from required parameters
@@ -2914,7 +2914,7 @@ Constructs ListJobsResult's fields from required parameters
 
 ``` purescript
 newtype ListNetworkProfilesRequest
-  = ListNetworkProfilesRequest { arn :: AmazonResourceName, "type" :: NullOrUndefined (NetworkProfileType), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListNetworkProfilesRequest { arn :: AmazonResourceName, "type" :: Maybe (NetworkProfileType), nextToken :: Maybe (PaginationToken) }
 ```
 
 ##### Instances
@@ -2937,7 +2937,7 @@ Constructs ListNetworkProfilesRequest from required parameters
 #### `newListNetworkProfilesRequest'`
 
 ``` purescript
-newListNetworkProfilesRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, "type" :: NullOrUndefined (NetworkProfileType), nextToken :: NullOrUndefined (PaginationToken) } -> { arn :: AmazonResourceName, "type" :: NullOrUndefined (NetworkProfileType), nextToken :: NullOrUndefined (PaginationToken) }) -> ListNetworkProfilesRequest
+newListNetworkProfilesRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, "type" :: Maybe (NetworkProfileType), nextToken :: Maybe (PaginationToken) } -> { arn :: AmazonResourceName, "type" :: Maybe (NetworkProfileType), nextToken :: Maybe (PaginationToken) }) -> ListNetworkProfilesRequest
 ```
 
 Constructs ListNetworkProfilesRequest's fields from required parameters
@@ -2946,7 +2946,7 @@ Constructs ListNetworkProfilesRequest's fields from required parameters
 
 ``` purescript
 newtype ListNetworkProfilesResult
-  = ListNetworkProfilesResult { networkProfiles :: NullOrUndefined (NetworkProfiles), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListNetworkProfilesResult { networkProfiles :: Maybe (NetworkProfiles), nextToken :: Maybe (PaginationToken) }
 ```
 
 ##### Instances
@@ -2969,7 +2969,7 @@ Constructs ListNetworkProfilesResult from required parameters
 #### `newListNetworkProfilesResult'`
 
 ``` purescript
-newListNetworkProfilesResult' :: ({ networkProfiles :: NullOrUndefined (NetworkProfiles), nextToken :: NullOrUndefined (PaginationToken) } -> { networkProfiles :: NullOrUndefined (NetworkProfiles), nextToken :: NullOrUndefined (PaginationToken) }) -> ListNetworkProfilesResult
+newListNetworkProfilesResult' :: ({ networkProfiles :: Maybe (NetworkProfiles), nextToken :: Maybe (PaginationToken) } -> { networkProfiles :: Maybe (NetworkProfiles), nextToken :: Maybe (PaginationToken) }) -> ListNetworkProfilesResult
 ```
 
 Constructs ListNetworkProfilesResult's fields from required parameters
@@ -2978,7 +2978,7 @@ Constructs ListNetworkProfilesResult's fields from required parameters
 
 ``` purescript
 newtype ListOfferingPromotionsRequest
-  = ListOfferingPromotionsRequest { nextToken :: NullOrUndefined (PaginationToken) }
+  = ListOfferingPromotionsRequest { nextToken :: Maybe (PaginationToken) }
 ```
 
 ##### Instances
@@ -3001,7 +3001,7 @@ Constructs ListOfferingPromotionsRequest from required parameters
 #### `newListOfferingPromotionsRequest'`
 
 ``` purescript
-newListOfferingPromotionsRequest' :: ({ nextToken :: NullOrUndefined (PaginationToken) } -> { nextToken :: NullOrUndefined (PaginationToken) }) -> ListOfferingPromotionsRequest
+newListOfferingPromotionsRequest' :: ({ nextToken :: Maybe (PaginationToken) } -> { nextToken :: Maybe (PaginationToken) }) -> ListOfferingPromotionsRequest
 ```
 
 Constructs ListOfferingPromotionsRequest's fields from required parameters
@@ -3010,7 +3010,7 @@ Constructs ListOfferingPromotionsRequest's fields from required parameters
 
 ``` purescript
 newtype ListOfferingPromotionsResult
-  = ListOfferingPromotionsResult { offeringPromotions :: NullOrUndefined (OfferingPromotions), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListOfferingPromotionsResult { offeringPromotions :: Maybe (OfferingPromotions), nextToken :: Maybe (PaginationToken) }
 ```
 
 ##### Instances
@@ -3033,7 +3033,7 @@ Constructs ListOfferingPromotionsResult from required parameters
 #### `newListOfferingPromotionsResult'`
 
 ``` purescript
-newListOfferingPromotionsResult' :: ({ offeringPromotions :: NullOrUndefined (OfferingPromotions), nextToken :: NullOrUndefined (PaginationToken) } -> { offeringPromotions :: NullOrUndefined (OfferingPromotions), nextToken :: NullOrUndefined (PaginationToken) }) -> ListOfferingPromotionsResult
+newListOfferingPromotionsResult' :: ({ offeringPromotions :: Maybe (OfferingPromotions), nextToken :: Maybe (PaginationToken) } -> { offeringPromotions :: Maybe (OfferingPromotions), nextToken :: Maybe (PaginationToken) }) -> ListOfferingPromotionsResult
 ```
 
 Constructs ListOfferingPromotionsResult's fields from required parameters
@@ -3042,7 +3042,7 @@ Constructs ListOfferingPromotionsResult's fields from required parameters
 
 ``` purescript
 newtype ListOfferingTransactionsRequest
-  = ListOfferingTransactionsRequest { nextToken :: NullOrUndefined (PaginationToken) }
+  = ListOfferingTransactionsRequest { nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the request to list the offering transaction history.</p>
@@ -3067,7 +3067,7 @@ Constructs ListOfferingTransactionsRequest from required parameters
 #### `newListOfferingTransactionsRequest'`
 
 ``` purescript
-newListOfferingTransactionsRequest' :: ({ nextToken :: NullOrUndefined (PaginationToken) } -> { nextToken :: NullOrUndefined (PaginationToken) }) -> ListOfferingTransactionsRequest
+newListOfferingTransactionsRequest' :: ({ nextToken :: Maybe (PaginationToken) } -> { nextToken :: Maybe (PaginationToken) }) -> ListOfferingTransactionsRequest
 ```
 
 Constructs ListOfferingTransactionsRequest's fields from required parameters
@@ -3076,7 +3076,7 @@ Constructs ListOfferingTransactionsRequest's fields from required parameters
 
 ``` purescript
 newtype ListOfferingTransactionsResult
-  = ListOfferingTransactionsResult { offeringTransactions :: NullOrUndefined (OfferingTransactions), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListOfferingTransactionsResult { offeringTransactions :: Maybe (OfferingTransactions), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Returns the transaction log of the specified offerings.</p>
@@ -3101,7 +3101,7 @@ Constructs ListOfferingTransactionsResult from required parameters
 #### `newListOfferingTransactionsResult'`
 
 ``` purescript
-newListOfferingTransactionsResult' :: ({ offeringTransactions :: NullOrUndefined (OfferingTransactions), nextToken :: NullOrUndefined (PaginationToken) } -> { offeringTransactions :: NullOrUndefined (OfferingTransactions), nextToken :: NullOrUndefined (PaginationToken) }) -> ListOfferingTransactionsResult
+newListOfferingTransactionsResult' :: ({ offeringTransactions :: Maybe (OfferingTransactions), nextToken :: Maybe (PaginationToken) } -> { offeringTransactions :: Maybe (OfferingTransactions), nextToken :: Maybe (PaginationToken) }) -> ListOfferingTransactionsResult
 ```
 
 Constructs ListOfferingTransactionsResult's fields from required parameters
@@ -3110,7 +3110,7 @@ Constructs ListOfferingTransactionsResult's fields from required parameters
 
 ``` purescript
 newtype ListOfferingsRequest
-  = ListOfferingsRequest { nextToken :: NullOrUndefined (PaginationToken) }
+  = ListOfferingsRequest { nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the request to list all offerings.</p>
@@ -3135,7 +3135,7 @@ Constructs ListOfferingsRequest from required parameters
 #### `newListOfferingsRequest'`
 
 ``` purescript
-newListOfferingsRequest' :: ({ nextToken :: NullOrUndefined (PaginationToken) } -> { nextToken :: NullOrUndefined (PaginationToken) }) -> ListOfferingsRequest
+newListOfferingsRequest' :: ({ nextToken :: Maybe (PaginationToken) } -> { nextToken :: Maybe (PaginationToken) }) -> ListOfferingsRequest
 ```
 
 Constructs ListOfferingsRequest's fields from required parameters
@@ -3144,7 +3144,7 @@ Constructs ListOfferingsRequest's fields from required parameters
 
 ``` purescript
 newtype ListOfferingsResult
-  = ListOfferingsResult { offerings :: NullOrUndefined (Offerings), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListOfferingsResult { offerings :: Maybe (Offerings), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the return values of the list of offerings.</p>
@@ -3169,7 +3169,7 @@ Constructs ListOfferingsResult from required parameters
 #### `newListOfferingsResult'`
 
 ``` purescript
-newListOfferingsResult' :: ({ offerings :: NullOrUndefined (Offerings), nextToken :: NullOrUndefined (PaginationToken) } -> { offerings :: NullOrUndefined (Offerings), nextToken :: NullOrUndefined (PaginationToken) }) -> ListOfferingsResult
+newListOfferingsResult' :: ({ offerings :: Maybe (Offerings), nextToken :: Maybe (PaginationToken) } -> { offerings :: Maybe (Offerings), nextToken :: Maybe (PaginationToken) }) -> ListOfferingsResult
 ```
 
 Constructs ListOfferingsResult's fields from required parameters
@@ -3178,7 +3178,7 @@ Constructs ListOfferingsResult's fields from required parameters
 
 ``` purescript
 newtype ListProjectsRequest
-  = ListProjectsRequest { arn :: NullOrUndefined (AmazonResourceName), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListProjectsRequest { arn :: Maybe (AmazonResourceName), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents a request to the list projects operation.</p>
@@ -3203,7 +3203,7 @@ Constructs ListProjectsRequest from required parameters
 #### `newListProjectsRequest'`
 
 ``` purescript
-newListProjectsRequest' :: ({ arn :: NullOrUndefined (AmazonResourceName), nextToken :: NullOrUndefined (PaginationToken) } -> { arn :: NullOrUndefined (AmazonResourceName), nextToken :: NullOrUndefined (PaginationToken) }) -> ListProjectsRequest
+newListProjectsRequest' :: ({ arn :: Maybe (AmazonResourceName), nextToken :: Maybe (PaginationToken) } -> { arn :: Maybe (AmazonResourceName), nextToken :: Maybe (PaginationToken) }) -> ListProjectsRequest
 ```
 
 Constructs ListProjectsRequest's fields from required parameters
@@ -3212,7 +3212,7 @@ Constructs ListProjectsRequest's fields from required parameters
 
 ``` purescript
 newtype ListProjectsResult
-  = ListProjectsResult { projects :: NullOrUndefined (Projects), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListProjectsResult { projects :: Maybe (Projects), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the result of a list projects request.</p>
@@ -3237,7 +3237,7 @@ Constructs ListProjectsResult from required parameters
 #### `newListProjectsResult'`
 
 ``` purescript
-newListProjectsResult' :: ({ projects :: NullOrUndefined (Projects), nextToken :: NullOrUndefined (PaginationToken) } -> { projects :: NullOrUndefined (Projects), nextToken :: NullOrUndefined (PaginationToken) }) -> ListProjectsResult
+newListProjectsResult' :: ({ projects :: Maybe (Projects), nextToken :: Maybe (PaginationToken) } -> { projects :: Maybe (Projects), nextToken :: Maybe (PaginationToken) }) -> ListProjectsResult
 ```
 
 Constructs ListProjectsResult's fields from required parameters
@@ -3246,7 +3246,7 @@ Constructs ListProjectsResult's fields from required parameters
 
 ``` purescript
 newtype ListRemoteAccessSessionsRequest
-  = ListRemoteAccessSessionsRequest { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }
+  = ListRemoteAccessSessionsRequest { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the request to return information about the remote access session.</p>
@@ -3271,7 +3271,7 @@ Constructs ListRemoteAccessSessionsRequest from required parameters
 #### `newListRemoteAccessSessionsRequest'`
 
 ``` purescript
-newListRemoteAccessSessionsRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }) -> ListRemoteAccessSessionsRequest
+newListRemoteAccessSessionsRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }) -> ListRemoteAccessSessionsRequest
 ```
 
 Constructs ListRemoteAccessSessionsRequest's fields from required parameters
@@ -3280,7 +3280,7 @@ Constructs ListRemoteAccessSessionsRequest's fields from required parameters
 
 ``` purescript
 newtype ListRemoteAccessSessionsResult
-  = ListRemoteAccessSessionsResult { remoteAccessSessions :: NullOrUndefined (RemoteAccessSessions), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListRemoteAccessSessionsResult { remoteAccessSessions :: Maybe (RemoteAccessSessions), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the response from the server after AWS Device Farm makes a request to return information about the remote access session.</p>
@@ -3305,7 +3305,7 @@ Constructs ListRemoteAccessSessionsResult from required parameters
 #### `newListRemoteAccessSessionsResult'`
 
 ``` purescript
-newListRemoteAccessSessionsResult' :: ({ remoteAccessSessions :: NullOrUndefined (RemoteAccessSessions), nextToken :: NullOrUndefined (PaginationToken) } -> { remoteAccessSessions :: NullOrUndefined (RemoteAccessSessions), nextToken :: NullOrUndefined (PaginationToken) }) -> ListRemoteAccessSessionsResult
+newListRemoteAccessSessionsResult' :: ({ remoteAccessSessions :: Maybe (RemoteAccessSessions), nextToken :: Maybe (PaginationToken) } -> { remoteAccessSessions :: Maybe (RemoteAccessSessions), nextToken :: Maybe (PaginationToken) }) -> ListRemoteAccessSessionsResult
 ```
 
 Constructs ListRemoteAccessSessionsResult's fields from required parameters
@@ -3314,7 +3314,7 @@ Constructs ListRemoteAccessSessionsResult's fields from required parameters
 
 ``` purescript
 newtype ListRunsRequest
-  = ListRunsRequest { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }
+  = ListRunsRequest { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents a request to the list runs operation.</p>
@@ -3339,7 +3339,7 @@ Constructs ListRunsRequest from required parameters
 #### `newListRunsRequest'`
 
 ``` purescript
-newListRunsRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }) -> ListRunsRequest
+newListRunsRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }) -> ListRunsRequest
 ```
 
 Constructs ListRunsRequest's fields from required parameters
@@ -3348,7 +3348,7 @@ Constructs ListRunsRequest's fields from required parameters
 
 ``` purescript
 newtype ListRunsResult
-  = ListRunsResult { runs :: NullOrUndefined (Runs), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListRunsResult { runs :: Maybe (Runs), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the result of a list runs request.</p>
@@ -3373,7 +3373,7 @@ Constructs ListRunsResult from required parameters
 #### `newListRunsResult'`
 
 ``` purescript
-newListRunsResult' :: ({ runs :: NullOrUndefined (Runs), nextToken :: NullOrUndefined (PaginationToken) } -> { runs :: NullOrUndefined (Runs), nextToken :: NullOrUndefined (PaginationToken) }) -> ListRunsResult
+newListRunsResult' :: ({ runs :: Maybe (Runs), nextToken :: Maybe (PaginationToken) } -> { runs :: Maybe (Runs), nextToken :: Maybe (PaginationToken) }) -> ListRunsResult
 ```
 
 Constructs ListRunsResult's fields from required parameters
@@ -3382,7 +3382,7 @@ Constructs ListRunsResult's fields from required parameters
 
 ``` purescript
 newtype ListSamplesRequest
-  = ListSamplesRequest { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }
+  = ListSamplesRequest { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents a request to the list samples operation.</p>
@@ -3407,7 +3407,7 @@ Constructs ListSamplesRequest from required parameters
 #### `newListSamplesRequest'`
 
 ``` purescript
-newListSamplesRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }) -> ListSamplesRequest
+newListSamplesRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }) -> ListSamplesRequest
 ```
 
 Constructs ListSamplesRequest's fields from required parameters
@@ -3416,7 +3416,7 @@ Constructs ListSamplesRequest's fields from required parameters
 
 ``` purescript
 newtype ListSamplesResult
-  = ListSamplesResult { samples :: NullOrUndefined (Samples), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListSamplesResult { samples :: Maybe (Samples), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the result of a list samples request.</p>
@@ -3441,7 +3441,7 @@ Constructs ListSamplesResult from required parameters
 #### `newListSamplesResult'`
 
 ``` purescript
-newListSamplesResult' :: ({ samples :: NullOrUndefined (Samples), nextToken :: NullOrUndefined (PaginationToken) } -> { samples :: NullOrUndefined (Samples), nextToken :: NullOrUndefined (PaginationToken) }) -> ListSamplesResult
+newListSamplesResult' :: ({ samples :: Maybe (Samples), nextToken :: Maybe (PaginationToken) } -> { samples :: Maybe (Samples), nextToken :: Maybe (PaginationToken) }) -> ListSamplesResult
 ```
 
 Constructs ListSamplesResult's fields from required parameters
@@ -3450,7 +3450,7 @@ Constructs ListSamplesResult's fields from required parameters
 
 ``` purescript
 newtype ListSuitesRequest
-  = ListSuitesRequest { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }
+  = ListSuitesRequest { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents a request to the list suites operation.</p>
@@ -3475,7 +3475,7 @@ Constructs ListSuitesRequest from required parameters
 #### `newListSuitesRequest'`
 
 ``` purescript
-newListSuitesRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }) -> ListSuitesRequest
+newListSuitesRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }) -> ListSuitesRequest
 ```
 
 Constructs ListSuitesRequest's fields from required parameters
@@ -3484,7 +3484,7 @@ Constructs ListSuitesRequest's fields from required parameters
 
 ``` purescript
 newtype ListSuitesResult
-  = ListSuitesResult { suites :: NullOrUndefined (Suites), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListSuitesResult { suites :: Maybe (Suites), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the result of a list suites request.</p>
@@ -3509,7 +3509,7 @@ Constructs ListSuitesResult from required parameters
 #### `newListSuitesResult'`
 
 ``` purescript
-newListSuitesResult' :: ({ suites :: NullOrUndefined (Suites), nextToken :: NullOrUndefined (PaginationToken) } -> { suites :: NullOrUndefined (Suites), nextToken :: NullOrUndefined (PaginationToken) }) -> ListSuitesResult
+newListSuitesResult' :: ({ suites :: Maybe (Suites), nextToken :: Maybe (PaginationToken) } -> { suites :: Maybe (Suites), nextToken :: Maybe (PaginationToken) }) -> ListSuitesResult
 ```
 
 Constructs ListSuitesResult's fields from required parameters
@@ -3518,7 +3518,7 @@ Constructs ListSuitesResult's fields from required parameters
 
 ``` purescript
 newtype ListTestsRequest
-  = ListTestsRequest { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }
+  = ListTestsRequest { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents a request to the list tests operation.</p>
@@ -3543,7 +3543,7 @@ Constructs ListTestsRequest from required parameters
 #### `newListTestsRequest'`
 
 ``` purescript
-newListTestsRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }) -> ListTestsRequest
+newListTestsRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }) -> ListTestsRequest
 ```
 
 Constructs ListTestsRequest's fields from required parameters
@@ -3552,7 +3552,7 @@ Constructs ListTestsRequest's fields from required parameters
 
 ``` purescript
 newtype ListTestsResult
-  = ListTestsResult { tests :: NullOrUndefined (Tests), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListTestsResult { tests :: Maybe (Tests), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the result of a list tests request.</p>
@@ -3577,7 +3577,7 @@ Constructs ListTestsResult from required parameters
 #### `newListTestsResult'`
 
 ``` purescript
-newListTestsResult' :: ({ tests :: NullOrUndefined (Tests), nextToken :: NullOrUndefined (PaginationToken) } -> { tests :: NullOrUndefined (Tests), nextToken :: NullOrUndefined (PaginationToken) }) -> ListTestsResult
+newListTestsResult' :: ({ tests :: Maybe (Tests), nextToken :: Maybe (PaginationToken) } -> { tests :: Maybe (Tests), nextToken :: Maybe (PaginationToken) }) -> ListTestsResult
 ```
 
 Constructs ListTestsResult's fields from required parameters
@@ -3586,7 +3586,7 @@ Constructs ListTestsResult's fields from required parameters
 
 ``` purescript
 newtype ListUniqueProblemsRequest
-  = ListUniqueProblemsRequest { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }
+  = ListUniqueProblemsRequest { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents a request to the list unique problems operation.</p>
@@ -3611,7 +3611,7 @@ Constructs ListUniqueProblemsRequest from required parameters
 #### `newListUniqueProblemsRequest'`
 
 ``` purescript
-newListUniqueProblemsRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }) -> ListUniqueProblemsRequest
+newListUniqueProblemsRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }) -> ListUniqueProblemsRequest
 ```
 
 Constructs ListUniqueProblemsRequest's fields from required parameters
@@ -3620,7 +3620,7 @@ Constructs ListUniqueProblemsRequest's fields from required parameters
 
 ``` purescript
 newtype ListUniqueProblemsResult
-  = ListUniqueProblemsResult { uniqueProblems :: NullOrUndefined (UniqueProblemsByExecutionResultMap), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListUniqueProblemsResult { uniqueProblems :: Maybe (UniqueProblemsByExecutionResultMap), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the result of a list unique problems request.</p>
@@ -3645,7 +3645,7 @@ Constructs ListUniqueProblemsResult from required parameters
 #### `newListUniqueProblemsResult'`
 
 ``` purescript
-newListUniqueProblemsResult' :: ({ uniqueProblems :: NullOrUndefined (UniqueProblemsByExecutionResultMap), nextToken :: NullOrUndefined (PaginationToken) } -> { uniqueProblems :: NullOrUndefined (UniqueProblemsByExecutionResultMap), nextToken :: NullOrUndefined (PaginationToken) }) -> ListUniqueProblemsResult
+newListUniqueProblemsResult' :: ({ uniqueProblems :: Maybe (UniqueProblemsByExecutionResultMap), nextToken :: Maybe (PaginationToken) } -> { uniqueProblems :: Maybe (UniqueProblemsByExecutionResultMap), nextToken :: Maybe (PaginationToken) }) -> ListUniqueProblemsResult
 ```
 
 Constructs ListUniqueProblemsResult's fields from required parameters
@@ -3654,7 +3654,7 @@ Constructs ListUniqueProblemsResult's fields from required parameters
 
 ``` purescript
 newtype ListUploadsRequest
-  = ListUploadsRequest { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }
+  = ListUploadsRequest { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents a request to the list uploads operation.</p>
@@ -3679,7 +3679,7 @@ Constructs ListUploadsRequest from required parameters
 #### `newListUploadsRequest'`
 
 ``` purescript
-newListUploadsRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: NullOrUndefined (PaginationToken) }) -> ListUploadsRequest
+newListUploadsRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) } -> { arn :: AmazonResourceName, nextToken :: Maybe (PaginationToken) }) -> ListUploadsRequest
 ```
 
 Constructs ListUploadsRequest's fields from required parameters
@@ -3688,7 +3688,7 @@ Constructs ListUploadsRequest's fields from required parameters
 
 ``` purescript
 newtype ListUploadsResult
-  = ListUploadsResult { uploads :: NullOrUndefined (Uploads), nextToken :: NullOrUndefined (PaginationToken) }
+  = ListUploadsResult { uploads :: Maybe (Uploads), nextToken :: Maybe (PaginationToken) }
 ```
 
 <p>Represents the result of a list uploads request.</p>
@@ -3713,7 +3713,7 @@ Constructs ListUploadsResult from required parameters
 #### `newListUploadsResult'`
 
 ``` purescript
-newListUploadsResult' :: ({ uploads :: NullOrUndefined (Uploads), nextToken :: NullOrUndefined (PaginationToken) } -> { uploads :: NullOrUndefined (Uploads), nextToken :: NullOrUndefined (PaginationToken) }) -> ListUploadsResult
+newListUploadsResult' :: ({ uploads :: Maybe (Uploads), nextToken :: Maybe (PaginationToken) } -> { uploads :: Maybe (Uploads), nextToken :: Maybe (PaginationToken) }) -> ListUploadsResult
 ```
 
 Constructs ListUploadsResult's fields from required parameters
@@ -3804,7 +3804,7 @@ Encode Metadata
 
 ``` purescript
 newtype MonetaryAmount
-  = MonetaryAmount { amount :: NullOrUndefined (Number), currencyCode :: NullOrUndefined (CurrencyCode) }
+  = MonetaryAmount { amount :: Maybe (Number), currencyCode :: Maybe (CurrencyCode) }
 ```
 
 <p>A number representing the monetary amount for an offering or transaction.</p>
@@ -3829,7 +3829,7 @@ Constructs MonetaryAmount from required parameters
 #### `newMonetaryAmount'`
 
 ``` purescript
-newMonetaryAmount' :: ({ amount :: NullOrUndefined (Number), currencyCode :: NullOrUndefined (CurrencyCode) } -> { amount :: NullOrUndefined (Number), currencyCode :: NullOrUndefined (CurrencyCode) }) -> MonetaryAmount
+newMonetaryAmount' :: ({ amount :: Maybe (Number), currencyCode :: Maybe (CurrencyCode) } -> { amount :: Maybe (Number), currencyCode :: Maybe (CurrencyCode) }) -> MonetaryAmount
 ```
 
 Constructs MonetaryAmount's fields from required parameters
@@ -3854,7 +3854,7 @@ Encode Name
 
 ``` purescript
 newtype NetworkProfile
-  = NetworkProfile { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), description :: NullOrUndefined (Message), "type" :: NullOrUndefined (NetworkProfileType), uplinkBandwidthBits :: NullOrUndefined (Number), downlinkBandwidthBits :: NullOrUndefined (Number), uplinkDelayMs :: NullOrUndefined (Number), downlinkDelayMs :: NullOrUndefined (Number), uplinkJitterMs :: NullOrUndefined (Number), downlinkJitterMs :: NullOrUndefined (Number), uplinkLossPercent :: NullOrUndefined (PercentInteger), downlinkLossPercent :: NullOrUndefined (PercentInteger) }
+  = NetworkProfile { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), description :: Maybe (Message), "type" :: Maybe (NetworkProfileType), uplinkBandwidthBits :: Maybe (Number), downlinkBandwidthBits :: Maybe (Number), uplinkDelayMs :: Maybe (Number), downlinkDelayMs :: Maybe (Number), uplinkJitterMs :: Maybe (Number), downlinkJitterMs :: Maybe (Number), uplinkLossPercent :: Maybe (PercentInteger), downlinkLossPercent :: Maybe (PercentInteger) }
 ```
 
 <p>An array of settings that describes characteristics of a network profile.</p>
@@ -3879,7 +3879,7 @@ Constructs NetworkProfile from required parameters
 #### `newNetworkProfile'`
 
 ``` purescript
-newNetworkProfile' :: ({ arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), description :: NullOrUndefined (Message), "type" :: NullOrUndefined (NetworkProfileType), uplinkBandwidthBits :: NullOrUndefined (Number), downlinkBandwidthBits :: NullOrUndefined (Number), uplinkDelayMs :: NullOrUndefined (Number), downlinkDelayMs :: NullOrUndefined (Number), uplinkJitterMs :: NullOrUndefined (Number), downlinkJitterMs :: NullOrUndefined (Number), uplinkLossPercent :: NullOrUndefined (PercentInteger), downlinkLossPercent :: NullOrUndefined (PercentInteger) } -> { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), description :: NullOrUndefined (Message), "type" :: NullOrUndefined (NetworkProfileType), uplinkBandwidthBits :: NullOrUndefined (Number), downlinkBandwidthBits :: NullOrUndefined (Number), uplinkDelayMs :: NullOrUndefined (Number), downlinkDelayMs :: NullOrUndefined (Number), uplinkJitterMs :: NullOrUndefined (Number), downlinkJitterMs :: NullOrUndefined (Number), uplinkLossPercent :: NullOrUndefined (PercentInteger), downlinkLossPercent :: NullOrUndefined (PercentInteger) }) -> NetworkProfile
+newNetworkProfile' :: ({ arn :: Maybe (AmazonResourceName), name :: Maybe (Name), description :: Maybe (Message), "type" :: Maybe (NetworkProfileType), uplinkBandwidthBits :: Maybe (Number), downlinkBandwidthBits :: Maybe (Number), uplinkDelayMs :: Maybe (Number), downlinkDelayMs :: Maybe (Number), uplinkJitterMs :: Maybe (Number), downlinkJitterMs :: Maybe (Number), uplinkLossPercent :: Maybe (PercentInteger), downlinkLossPercent :: Maybe (PercentInteger) } -> { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), description :: Maybe (Message), "type" :: Maybe (NetworkProfileType), uplinkBandwidthBits :: Maybe (Number), downlinkBandwidthBits :: Maybe (Number), uplinkDelayMs :: Maybe (Number), downlinkDelayMs :: Maybe (Number), uplinkJitterMs :: Maybe (Number), downlinkJitterMs :: Maybe (Number), uplinkLossPercent :: Maybe (PercentInteger), downlinkLossPercent :: Maybe (PercentInteger) }) -> NetworkProfile
 ```
 
 Constructs NetworkProfile's fields from required parameters
@@ -3920,7 +3920,7 @@ Encode NetworkProfiles
 
 ``` purescript
 newtype NotEligibleException
-  = NotEligibleException { message :: NullOrUndefined (Message) }
+  = NotEligibleException { message :: Maybe (Message) }
 ```
 
 <p>Exception gets thrown when a user is not eligible to perform the specified transaction.</p>
@@ -3945,7 +3945,7 @@ Constructs NotEligibleException from required parameters
 #### `newNotEligibleException'`
 
 ``` purescript
-newNotEligibleException' :: ({ message :: NullOrUndefined (Message) } -> { message :: NullOrUndefined (Message) }) -> NotEligibleException
+newNotEligibleException' :: ({ message :: Maybe (Message) } -> { message :: Maybe (Message) }) -> NotEligibleException
 ```
 
 Constructs NotEligibleException's fields from required parameters
@@ -3954,7 +3954,7 @@ Constructs NotEligibleException's fields from required parameters
 
 ``` purescript
 newtype NotFoundException
-  = NotFoundException { message :: NullOrUndefined (Message) }
+  = NotFoundException { message :: Maybe (Message) }
 ```
 
 <p>The specified entity was not found.</p>
@@ -3979,7 +3979,7 @@ Constructs NotFoundException from required parameters
 #### `newNotFoundException'`
 
 ``` purescript
-newNotFoundException' :: ({ message :: NullOrUndefined (Message) } -> { message :: NullOrUndefined (Message) }) -> NotFoundException
+newNotFoundException' :: ({ message :: Maybe (Message) } -> { message :: Maybe (Message) }) -> NotFoundException
 ```
 
 Constructs NotFoundException's fields from required parameters
@@ -3988,7 +3988,7 @@ Constructs NotFoundException's fields from required parameters
 
 ``` purescript
 newtype Offering
-  = Offering { id :: NullOrUndefined (OfferingIdentifier), description :: NullOrUndefined (Message), "type" :: NullOrUndefined (OfferingType), platform :: NullOrUndefined (DevicePlatform), recurringCharges :: NullOrUndefined (RecurringCharges) }
+  = Offering { id :: Maybe (OfferingIdentifier), description :: Maybe (Message), "type" :: Maybe (OfferingType), platform :: Maybe (DevicePlatform), recurringCharges :: Maybe (RecurringCharges) }
 ```
 
 <p>Represents the metadata of a device offering.</p>
@@ -4013,7 +4013,7 @@ Constructs Offering from required parameters
 #### `newOffering'`
 
 ``` purescript
-newOffering' :: ({ id :: NullOrUndefined (OfferingIdentifier), description :: NullOrUndefined (Message), "type" :: NullOrUndefined (OfferingType), platform :: NullOrUndefined (DevicePlatform), recurringCharges :: NullOrUndefined (RecurringCharges) } -> { id :: NullOrUndefined (OfferingIdentifier), description :: NullOrUndefined (Message), "type" :: NullOrUndefined (OfferingType), platform :: NullOrUndefined (DevicePlatform), recurringCharges :: NullOrUndefined (RecurringCharges) }) -> Offering
+newOffering' :: ({ id :: Maybe (OfferingIdentifier), description :: Maybe (Message), "type" :: Maybe (OfferingType), platform :: Maybe (DevicePlatform), recurringCharges :: Maybe (RecurringCharges) } -> { id :: Maybe (OfferingIdentifier), description :: Maybe (Message), "type" :: Maybe (OfferingType), platform :: Maybe (DevicePlatform), recurringCharges :: Maybe (RecurringCharges) }) -> Offering
 ```
 
 Constructs Offering's fields from required parameters
@@ -4038,7 +4038,7 @@ Encode OfferingIdentifier
 
 ``` purescript
 newtype OfferingPromotion
-  = OfferingPromotion { id :: NullOrUndefined (OfferingPromotionIdentifier), description :: NullOrUndefined (Message) }
+  = OfferingPromotion { id :: Maybe (OfferingPromotionIdentifier), description :: Maybe (Message) }
 ```
 
 <p>Represents information about an offering promotion.</p>
@@ -4063,7 +4063,7 @@ Constructs OfferingPromotion from required parameters
 #### `newOfferingPromotion'`
 
 ``` purescript
-newOfferingPromotion' :: ({ id :: NullOrUndefined (OfferingPromotionIdentifier), description :: NullOrUndefined (Message) } -> { id :: NullOrUndefined (OfferingPromotionIdentifier), description :: NullOrUndefined (Message) }) -> OfferingPromotion
+newOfferingPromotion' :: ({ id :: Maybe (OfferingPromotionIdentifier), description :: Maybe (Message) } -> { id :: Maybe (OfferingPromotionIdentifier), description :: Maybe (Message) }) -> OfferingPromotion
 ```
 
 Constructs OfferingPromotion's fields from required parameters
@@ -4104,7 +4104,7 @@ Encode OfferingPromotions
 
 ``` purescript
 newtype OfferingStatus
-  = OfferingStatus { "type" :: NullOrUndefined (OfferingTransactionType), offering :: NullOrUndefined (Offering), quantity :: NullOrUndefined (Int), effectiveOn :: NullOrUndefined (DateTime) }
+  = OfferingStatus { "type" :: Maybe (OfferingTransactionType), offering :: Maybe (Offering), quantity :: Maybe (Int), effectiveOn :: Maybe (DateTime) }
 ```
 
 <p>The status of the offering.</p>
@@ -4129,7 +4129,7 @@ Constructs OfferingStatus from required parameters
 #### `newOfferingStatus'`
 
 ``` purescript
-newOfferingStatus' :: ({ "type" :: NullOrUndefined (OfferingTransactionType), offering :: NullOrUndefined (Offering), quantity :: NullOrUndefined (Int), effectiveOn :: NullOrUndefined (DateTime) } -> { "type" :: NullOrUndefined (OfferingTransactionType), offering :: NullOrUndefined (Offering), quantity :: NullOrUndefined (Int), effectiveOn :: NullOrUndefined (DateTime) }) -> OfferingStatus
+newOfferingStatus' :: ({ "type" :: Maybe (OfferingTransactionType), offering :: Maybe (Offering), quantity :: Maybe (Int), effectiveOn :: Maybe (DateTime) } -> { "type" :: Maybe (OfferingTransactionType), offering :: Maybe (Offering), quantity :: Maybe (Int), effectiveOn :: Maybe (DateTime) }) -> OfferingStatus
 ```
 
 Constructs OfferingStatus's fields from required parameters
@@ -4154,7 +4154,7 @@ Encode OfferingStatusMap
 
 ``` purescript
 newtype OfferingTransaction
-  = OfferingTransaction { offeringStatus :: NullOrUndefined (OfferingStatus), transactionId :: NullOrUndefined (TransactionIdentifier), offeringPromotionId :: NullOrUndefined (OfferingPromotionIdentifier), createdOn :: NullOrUndefined (DateTime), cost :: NullOrUndefined (MonetaryAmount) }
+  = OfferingTransaction { offeringStatus :: Maybe (OfferingStatus), transactionId :: Maybe (TransactionIdentifier), offeringPromotionId :: Maybe (OfferingPromotionIdentifier), createdOn :: Maybe (DateTime), cost :: Maybe (MonetaryAmount) }
 ```
 
 <p>Represents the metadata of an offering transaction.</p>
@@ -4179,7 +4179,7 @@ Constructs OfferingTransaction from required parameters
 #### `newOfferingTransaction'`
 
 ``` purescript
-newOfferingTransaction' :: ({ offeringStatus :: NullOrUndefined (OfferingStatus), transactionId :: NullOrUndefined (TransactionIdentifier), offeringPromotionId :: NullOrUndefined (OfferingPromotionIdentifier), createdOn :: NullOrUndefined (DateTime), cost :: NullOrUndefined (MonetaryAmount) } -> { offeringStatus :: NullOrUndefined (OfferingStatus), transactionId :: NullOrUndefined (TransactionIdentifier), offeringPromotionId :: NullOrUndefined (OfferingPromotionIdentifier), createdOn :: NullOrUndefined (DateTime), cost :: NullOrUndefined (MonetaryAmount) }) -> OfferingTransaction
+newOfferingTransaction' :: ({ offeringStatus :: Maybe (OfferingStatus), transactionId :: Maybe (TransactionIdentifier), offeringPromotionId :: Maybe (OfferingPromotionIdentifier), createdOn :: Maybe (DateTime), cost :: Maybe (MonetaryAmount) } -> { offeringStatus :: Maybe (OfferingStatus), transactionId :: Maybe (TransactionIdentifier), offeringPromotionId :: Maybe (OfferingPromotionIdentifier), createdOn :: Maybe (DateTime), cost :: Maybe (MonetaryAmount) }) -> OfferingTransaction
 ```
 
 Constructs OfferingTransaction's fields from required parameters
@@ -4284,7 +4284,7 @@ Encode PercentInteger
 
 ``` purescript
 newtype Problem
-  = Problem { run :: NullOrUndefined (ProblemDetail), job :: NullOrUndefined (ProblemDetail), suite :: NullOrUndefined (ProblemDetail), test :: NullOrUndefined (ProblemDetail), device :: NullOrUndefined (Device), result :: NullOrUndefined (ExecutionResult), message :: NullOrUndefined (Message) }
+  = Problem { run :: Maybe (ProblemDetail), job :: Maybe (ProblemDetail), suite :: Maybe (ProblemDetail), test :: Maybe (ProblemDetail), device :: Maybe (Device), result :: Maybe (ExecutionResult), message :: Maybe (Message) }
 ```
 
 <p>Represents a specific warning or failure.</p>
@@ -4309,7 +4309,7 @@ Constructs Problem from required parameters
 #### `newProblem'`
 
 ``` purescript
-newProblem' :: ({ run :: NullOrUndefined (ProblemDetail), job :: NullOrUndefined (ProblemDetail), suite :: NullOrUndefined (ProblemDetail), test :: NullOrUndefined (ProblemDetail), device :: NullOrUndefined (Device), result :: NullOrUndefined (ExecutionResult), message :: NullOrUndefined (Message) } -> { run :: NullOrUndefined (ProblemDetail), job :: NullOrUndefined (ProblemDetail), suite :: NullOrUndefined (ProblemDetail), test :: NullOrUndefined (ProblemDetail), device :: NullOrUndefined (Device), result :: NullOrUndefined (ExecutionResult), message :: NullOrUndefined (Message) }) -> Problem
+newProblem' :: ({ run :: Maybe (ProblemDetail), job :: Maybe (ProblemDetail), suite :: Maybe (ProblemDetail), test :: Maybe (ProblemDetail), device :: Maybe (Device), result :: Maybe (ExecutionResult), message :: Maybe (Message) } -> { run :: Maybe (ProblemDetail), job :: Maybe (ProblemDetail), suite :: Maybe (ProblemDetail), test :: Maybe (ProblemDetail), device :: Maybe (Device), result :: Maybe (ExecutionResult), message :: Maybe (Message) }) -> Problem
 ```
 
 Constructs Problem's fields from required parameters
@@ -4318,7 +4318,7 @@ Constructs Problem's fields from required parameters
 
 ``` purescript
 newtype ProblemDetail
-  = ProblemDetail { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name) }
+  = ProblemDetail { arn :: Maybe (AmazonResourceName), name :: Maybe (Name) }
 ```
 
 <p>Information about a problem detail.</p>
@@ -4343,7 +4343,7 @@ Constructs ProblemDetail from required parameters
 #### `newProblemDetail'`
 
 ``` purescript
-newProblemDetail' :: ({ arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name) } -> { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name) }) -> ProblemDetail
+newProblemDetail' :: ({ arn :: Maybe (AmazonResourceName), name :: Maybe (Name) } -> { arn :: Maybe (AmazonResourceName), name :: Maybe (Name) }) -> ProblemDetail
 ```
 
 Constructs ProblemDetail's fields from required parameters
@@ -4368,7 +4368,7 @@ Encode Problems
 
 ``` purescript
 newtype Project
-  = Project { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), defaultJobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes), created :: NullOrUndefined (DateTime) }
+  = Project { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), defaultJobTimeoutMinutes :: Maybe (JobTimeoutMinutes), created :: Maybe (DateTime) }
 ```
 
 <p>Represents an operating-system neutral workspace for running and managing tests.</p>
@@ -4393,7 +4393,7 @@ Constructs Project from required parameters
 #### `newProject'`
 
 ``` purescript
-newProject' :: ({ arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), defaultJobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes), created :: NullOrUndefined (DateTime) } -> { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), defaultJobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes), created :: NullOrUndefined (DateTime) }) -> Project
+newProject' :: ({ arn :: Maybe (AmazonResourceName), name :: Maybe (Name), defaultJobTimeoutMinutes :: Maybe (JobTimeoutMinutes), created :: Maybe (DateTime) } -> { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), defaultJobTimeoutMinutes :: Maybe (JobTimeoutMinutes), created :: Maybe (DateTime) }) -> Project
 ```
 
 Constructs Project's fields from required parameters
@@ -4418,7 +4418,7 @@ Encode Projects
 
 ``` purescript
 newtype PurchaseOfferingRequest
-  = PurchaseOfferingRequest { offeringId :: NullOrUndefined (OfferingIdentifier), quantity :: NullOrUndefined (Int), offeringPromotionId :: NullOrUndefined (OfferingPromotionIdentifier) }
+  = PurchaseOfferingRequest { offeringId :: Maybe (OfferingIdentifier), quantity :: Maybe (Int), offeringPromotionId :: Maybe (OfferingPromotionIdentifier) }
 ```
 
 <p>Represents a request for a purchase offering.</p>
@@ -4443,7 +4443,7 @@ Constructs PurchaseOfferingRequest from required parameters
 #### `newPurchaseOfferingRequest'`
 
 ``` purescript
-newPurchaseOfferingRequest' :: ({ offeringId :: NullOrUndefined (OfferingIdentifier), quantity :: NullOrUndefined (Int), offeringPromotionId :: NullOrUndefined (OfferingPromotionIdentifier) } -> { offeringId :: NullOrUndefined (OfferingIdentifier), quantity :: NullOrUndefined (Int), offeringPromotionId :: NullOrUndefined (OfferingPromotionIdentifier) }) -> PurchaseOfferingRequest
+newPurchaseOfferingRequest' :: ({ offeringId :: Maybe (OfferingIdentifier), quantity :: Maybe (Int), offeringPromotionId :: Maybe (OfferingPromotionIdentifier) } -> { offeringId :: Maybe (OfferingIdentifier), quantity :: Maybe (Int), offeringPromotionId :: Maybe (OfferingPromotionIdentifier) }) -> PurchaseOfferingRequest
 ```
 
 Constructs PurchaseOfferingRequest's fields from required parameters
@@ -4452,7 +4452,7 @@ Constructs PurchaseOfferingRequest's fields from required parameters
 
 ``` purescript
 newtype PurchaseOfferingResult
-  = PurchaseOfferingResult { offeringTransaction :: NullOrUndefined (OfferingTransaction) }
+  = PurchaseOfferingResult { offeringTransaction :: Maybe (OfferingTransaction) }
 ```
 
 <p>The result of the purchase offering (e.g., success or failure).</p>
@@ -4477,7 +4477,7 @@ Constructs PurchaseOfferingResult from required parameters
 #### `newPurchaseOfferingResult'`
 
 ``` purescript
-newPurchaseOfferingResult' :: ({ offeringTransaction :: NullOrUndefined (OfferingTransaction) } -> { offeringTransaction :: NullOrUndefined (OfferingTransaction) }) -> PurchaseOfferingResult
+newPurchaseOfferingResult' :: ({ offeringTransaction :: Maybe (OfferingTransaction) } -> { offeringTransaction :: Maybe (OfferingTransaction) }) -> PurchaseOfferingResult
 ```
 
 Constructs PurchaseOfferingResult's fields from required parameters
@@ -4502,7 +4502,7 @@ Encode PurchasedDevicesMap
 
 ``` purescript
 newtype Radios
-  = Radios { wifi :: NullOrUndefined (Boolean), bluetooth :: NullOrUndefined (Boolean), nfc :: NullOrUndefined (Boolean), gps :: NullOrUndefined (Boolean) }
+  = Radios { wifi :: Maybe (Boolean), bluetooth :: Maybe (Boolean), nfc :: Maybe (Boolean), gps :: Maybe (Boolean) }
 ```
 
 <p>Represents the set of radios and their states on a device. Examples of radios include Wi-Fi, GPS, Bluetooth, and NFC.</p>
@@ -4527,7 +4527,7 @@ Constructs Radios from required parameters
 #### `newRadios'`
 
 ``` purescript
-newRadios' :: ({ wifi :: NullOrUndefined (Boolean), bluetooth :: NullOrUndefined (Boolean), nfc :: NullOrUndefined (Boolean), gps :: NullOrUndefined (Boolean) } -> { wifi :: NullOrUndefined (Boolean), bluetooth :: NullOrUndefined (Boolean), nfc :: NullOrUndefined (Boolean), gps :: NullOrUndefined (Boolean) }) -> Radios
+newRadios' :: ({ wifi :: Maybe (Boolean), bluetooth :: Maybe (Boolean), nfc :: Maybe (Boolean), gps :: Maybe (Boolean) } -> { wifi :: Maybe (Boolean), bluetooth :: Maybe (Boolean), nfc :: Maybe (Boolean), gps :: Maybe (Boolean) }) -> Radios
 ```
 
 Constructs Radios's fields from required parameters
@@ -4536,7 +4536,7 @@ Constructs Radios's fields from required parameters
 
 ``` purescript
 newtype RecurringCharge
-  = RecurringCharge { cost :: NullOrUndefined (MonetaryAmount), frequency :: NullOrUndefined (RecurringChargeFrequency) }
+  = RecurringCharge { cost :: Maybe (MonetaryAmount), frequency :: Maybe (RecurringChargeFrequency) }
 ```
 
 <p>Specifies whether charges for devices will be recurring.</p>
@@ -4561,7 +4561,7 @@ Constructs RecurringCharge from required parameters
 #### `newRecurringCharge'`
 
 ``` purescript
-newRecurringCharge' :: ({ cost :: NullOrUndefined (MonetaryAmount), frequency :: NullOrUndefined (RecurringChargeFrequency) } -> { cost :: NullOrUndefined (MonetaryAmount), frequency :: NullOrUndefined (RecurringChargeFrequency) }) -> RecurringCharge
+newRecurringCharge' :: ({ cost :: Maybe (MonetaryAmount), frequency :: Maybe (RecurringChargeFrequency) } -> { cost :: Maybe (MonetaryAmount), frequency :: Maybe (RecurringChargeFrequency) }) -> RecurringCharge
 ```
 
 Constructs RecurringCharge's fields from required parameters
@@ -4602,7 +4602,7 @@ Encode RecurringCharges
 
 ``` purescript
 newtype RemoteAccessSession
-  = RemoteAccessSession { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), created :: NullOrUndefined (DateTime), status :: NullOrUndefined (ExecutionStatus), result :: NullOrUndefined (ExecutionResult), message :: NullOrUndefined (Message), started :: NullOrUndefined (DateTime), stopped :: NullOrUndefined (DateTime), device :: NullOrUndefined (Device), remoteDebugEnabled :: NullOrUndefined (Boolean), remoteRecordEnabled :: NullOrUndefined (Boolean), remoteRecordAppArn :: NullOrUndefined (AmazonResourceName), hostAddress :: NullOrUndefined (HostAddress), clientId :: NullOrUndefined (ClientId), billingMethod :: NullOrUndefined (BillingMethod), deviceMinutes :: NullOrUndefined (DeviceMinutes), endpoint :: NullOrUndefined (String), deviceUdid :: NullOrUndefined (String), interactionMode :: NullOrUndefined (InteractionMode) }
+  = RemoteAccessSession { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), created :: Maybe (DateTime), status :: Maybe (ExecutionStatus), result :: Maybe (ExecutionResult), message :: Maybe (Message), started :: Maybe (DateTime), stopped :: Maybe (DateTime), device :: Maybe (Device), remoteDebugEnabled :: Maybe (Boolean), remoteRecordEnabled :: Maybe (Boolean), remoteRecordAppArn :: Maybe (AmazonResourceName), hostAddress :: Maybe (HostAddress), clientId :: Maybe (ClientId), billingMethod :: Maybe (BillingMethod), deviceMinutes :: Maybe (DeviceMinutes), endpoint :: Maybe (String), deviceUdid :: Maybe (String), interactionMode :: Maybe (InteractionMode) }
 ```
 
 <p>Represents information about the remote access session.</p>
@@ -4627,7 +4627,7 @@ Constructs RemoteAccessSession from required parameters
 #### `newRemoteAccessSession'`
 
 ``` purescript
-newRemoteAccessSession' :: ({ arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), created :: NullOrUndefined (DateTime), status :: NullOrUndefined (ExecutionStatus), result :: NullOrUndefined (ExecutionResult), message :: NullOrUndefined (Message), started :: NullOrUndefined (DateTime), stopped :: NullOrUndefined (DateTime), device :: NullOrUndefined (Device), remoteDebugEnabled :: NullOrUndefined (Boolean), remoteRecordEnabled :: NullOrUndefined (Boolean), remoteRecordAppArn :: NullOrUndefined (AmazonResourceName), hostAddress :: NullOrUndefined (HostAddress), clientId :: NullOrUndefined (ClientId), billingMethod :: NullOrUndefined (BillingMethod), deviceMinutes :: NullOrUndefined (DeviceMinutes), endpoint :: NullOrUndefined (String), deviceUdid :: NullOrUndefined (String), interactionMode :: NullOrUndefined (InteractionMode) } -> { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), created :: NullOrUndefined (DateTime), status :: NullOrUndefined (ExecutionStatus), result :: NullOrUndefined (ExecutionResult), message :: NullOrUndefined (Message), started :: NullOrUndefined (DateTime), stopped :: NullOrUndefined (DateTime), device :: NullOrUndefined (Device), remoteDebugEnabled :: NullOrUndefined (Boolean), remoteRecordEnabled :: NullOrUndefined (Boolean), remoteRecordAppArn :: NullOrUndefined (AmazonResourceName), hostAddress :: NullOrUndefined (HostAddress), clientId :: NullOrUndefined (ClientId), billingMethod :: NullOrUndefined (BillingMethod), deviceMinutes :: NullOrUndefined (DeviceMinutes), endpoint :: NullOrUndefined (String), deviceUdid :: NullOrUndefined (String), interactionMode :: NullOrUndefined (InteractionMode) }) -> RemoteAccessSession
+newRemoteAccessSession' :: ({ arn :: Maybe (AmazonResourceName), name :: Maybe (Name), created :: Maybe (DateTime), status :: Maybe (ExecutionStatus), result :: Maybe (ExecutionResult), message :: Maybe (Message), started :: Maybe (DateTime), stopped :: Maybe (DateTime), device :: Maybe (Device), remoteDebugEnabled :: Maybe (Boolean), remoteRecordEnabled :: Maybe (Boolean), remoteRecordAppArn :: Maybe (AmazonResourceName), hostAddress :: Maybe (HostAddress), clientId :: Maybe (ClientId), billingMethod :: Maybe (BillingMethod), deviceMinutes :: Maybe (DeviceMinutes), endpoint :: Maybe (String), deviceUdid :: Maybe (String), interactionMode :: Maybe (InteractionMode) } -> { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), created :: Maybe (DateTime), status :: Maybe (ExecutionStatus), result :: Maybe (ExecutionResult), message :: Maybe (Message), started :: Maybe (DateTime), stopped :: Maybe (DateTime), device :: Maybe (Device), remoteDebugEnabled :: Maybe (Boolean), remoteRecordEnabled :: Maybe (Boolean), remoteRecordAppArn :: Maybe (AmazonResourceName), hostAddress :: Maybe (HostAddress), clientId :: Maybe (ClientId), billingMethod :: Maybe (BillingMethod), deviceMinutes :: Maybe (DeviceMinutes), endpoint :: Maybe (String), deviceUdid :: Maybe (String), interactionMode :: Maybe (InteractionMode) }) -> RemoteAccessSession
 ```
 
 Constructs RemoteAccessSession's fields from required parameters
@@ -4652,7 +4652,7 @@ Encode RemoteAccessSessions
 
 ``` purescript
 newtype RenewOfferingRequest
-  = RenewOfferingRequest { offeringId :: NullOrUndefined (OfferingIdentifier), quantity :: NullOrUndefined (Int) }
+  = RenewOfferingRequest { offeringId :: Maybe (OfferingIdentifier), quantity :: Maybe (Int) }
 ```
 
 <p>A request representing an offering renewal.</p>
@@ -4677,7 +4677,7 @@ Constructs RenewOfferingRequest from required parameters
 #### `newRenewOfferingRequest'`
 
 ``` purescript
-newRenewOfferingRequest' :: ({ offeringId :: NullOrUndefined (OfferingIdentifier), quantity :: NullOrUndefined (Int) } -> { offeringId :: NullOrUndefined (OfferingIdentifier), quantity :: NullOrUndefined (Int) }) -> RenewOfferingRequest
+newRenewOfferingRequest' :: ({ offeringId :: Maybe (OfferingIdentifier), quantity :: Maybe (Int) } -> { offeringId :: Maybe (OfferingIdentifier), quantity :: Maybe (Int) }) -> RenewOfferingRequest
 ```
 
 Constructs RenewOfferingRequest's fields from required parameters
@@ -4686,7 +4686,7 @@ Constructs RenewOfferingRequest's fields from required parameters
 
 ``` purescript
 newtype RenewOfferingResult
-  = RenewOfferingResult { offeringTransaction :: NullOrUndefined (OfferingTransaction) }
+  = RenewOfferingResult { offeringTransaction :: Maybe (OfferingTransaction) }
 ```
 
 <p>The result of a renewal offering.</p>
@@ -4711,7 +4711,7 @@ Constructs RenewOfferingResult from required parameters
 #### `newRenewOfferingResult'`
 
 ``` purescript
-newRenewOfferingResult' :: ({ offeringTransaction :: NullOrUndefined (OfferingTransaction) } -> { offeringTransaction :: NullOrUndefined (OfferingTransaction) }) -> RenewOfferingResult
+newRenewOfferingResult' :: ({ offeringTransaction :: Maybe (OfferingTransaction) } -> { offeringTransaction :: Maybe (OfferingTransaction) }) -> RenewOfferingResult
 ```
 
 Constructs RenewOfferingResult's fields from required parameters
@@ -4720,7 +4720,7 @@ Constructs RenewOfferingResult's fields from required parameters
 
 ``` purescript
 newtype Resolution
-  = Resolution { width :: NullOrUndefined (Int), height :: NullOrUndefined (Int) }
+  = Resolution { width :: Maybe (Int), height :: Maybe (Int) }
 ```
 
 <p>Represents the screen resolution of a device in height and width, expressed in pixels.</p>
@@ -4745,7 +4745,7 @@ Constructs Resolution from required parameters
 #### `newResolution'`
 
 ``` purescript
-newResolution' :: ({ width :: NullOrUndefined (Int), height :: NullOrUndefined (Int) } -> { width :: NullOrUndefined (Int), height :: NullOrUndefined (Int) }) -> Resolution
+newResolution' :: ({ width :: Maybe (Int), height :: Maybe (Int) } -> { width :: Maybe (Int), height :: Maybe (Int) }) -> Resolution
 ```
 
 Constructs Resolution's fields from required parameters
@@ -4754,7 +4754,7 @@ Constructs Resolution's fields from required parameters
 
 ``` purescript
 newtype Rule
-  = Rule { attribute :: NullOrUndefined (DeviceAttribute), operator :: NullOrUndefined (RuleOperator), value :: NullOrUndefined (String) }
+  = Rule { attribute :: Maybe (DeviceAttribute), operator :: Maybe (RuleOperator), value :: Maybe (String) }
 ```
 
 <p>Represents a condition for a device pool.</p>
@@ -4779,7 +4779,7 @@ Constructs Rule from required parameters
 #### `newRule'`
 
 ``` purescript
-newRule' :: ({ attribute :: NullOrUndefined (DeviceAttribute), operator :: NullOrUndefined (RuleOperator), value :: NullOrUndefined (String) } -> { attribute :: NullOrUndefined (DeviceAttribute), operator :: NullOrUndefined (RuleOperator), value :: NullOrUndefined (String) }) -> Rule
+newRule' :: ({ attribute :: Maybe (DeviceAttribute), operator :: Maybe (RuleOperator), value :: Maybe (String) } -> { attribute :: Maybe (DeviceAttribute), operator :: Maybe (RuleOperator), value :: Maybe (String) }) -> Rule
 ```
 
 Constructs Rule's fields from required parameters
@@ -4820,7 +4820,7 @@ Encode Rules
 
 ``` purescript
 newtype Run
-  = Run { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), "type" :: NullOrUndefined (TestType), platform :: NullOrUndefined (DevicePlatform), created :: NullOrUndefined (DateTime), status :: NullOrUndefined (ExecutionStatus), result :: NullOrUndefined (ExecutionResult), started :: NullOrUndefined (DateTime), stopped :: NullOrUndefined (DateTime), counters :: NullOrUndefined (Counters), message :: NullOrUndefined (Message), totalJobs :: NullOrUndefined (Int), completedJobs :: NullOrUndefined (Int), billingMethod :: NullOrUndefined (BillingMethod), deviceMinutes :: NullOrUndefined (DeviceMinutes), networkProfile :: NullOrUndefined (NetworkProfile), parsingResultUrl :: NullOrUndefined (String), resultCode :: NullOrUndefined (ExecutionResultCode), seed :: NullOrUndefined (Int), appUpload :: NullOrUndefined (AmazonResourceName), eventCount :: NullOrUndefined (Int), jobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes), devicePoolArn :: NullOrUndefined (AmazonResourceName), locale :: NullOrUndefined (String), radios :: NullOrUndefined (Radios), location :: NullOrUndefined (Location), customerArtifactPaths :: NullOrUndefined (CustomerArtifactPaths), webUrl :: NullOrUndefined (String) }
+  = Run { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), "type" :: Maybe (TestType), platform :: Maybe (DevicePlatform), created :: Maybe (DateTime), status :: Maybe (ExecutionStatus), result :: Maybe (ExecutionResult), started :: Maybe (DateTime), stopped :: Maybe (DateTime), counters :: Maybe (Counters), message :: Maybe (Message), totalJobs :: Maybe (Int), completedJobs :: Maybe (Int), billingMethod :: Maybe (BillingMethod), deviceMinutes :: Maybe (DeviceMinutes), networkProfile :: Maybe (NetworkProfile), parsingResultUrl :: Maybe (String), resultCode :: Maybe (ExecutionResultCode), seed :: Maybe (Int), appUpload :: Maybe (AmazonResourceName), eventCount :: Maybe (Int), jobTimeoutMinutes :: Maybe (JobTimeoutMinutes), devicePoolArn :: Maybe (AmazonResourceName), locale :: Maybe (String), radios :: Maybe (Radios), location :: Maybe (Location), customerArtifactPaths :: Maybe (CustomerArtifactPaths), webUrl :: Maybe (String) }
 ```
 
 <p>Represents a test run on a set of devices with a given app package, test parameters, etc.</p>
@@ -4845,7 +4845,7 @@ Constructs Run from required parameters
 #### `newRun'`
 
 ``` purescript
-newRun' :: ({ arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), "type" :: NullOrUndefined (TestType), platform :: NullOrUndefined (DevicePlatform), created :: NullOrUndefined (DateTime), status :: NullOrUndefined (ExecutionStatus), result :: NullOrUndefined (ExecutionResult), started :: NullOrUndefined (DateTime), stopped :: NullOrUndefined (DateTime), counters :: NullOrUndefined (Counters), message :: NullOrUndefined (Message), totalJobs :: NullOrUndefined (Int), completedJobs :: NullOrUndefined (Int), billingMethod :: NullOrUndefined (BillingMethod), deviceMinutes :: NullOrUndefined (DeviceMinutes), networkProfile :: NullOrUndefined (NetworkProfile), parsingResultUrl :: NullOrUndefined (String), resultCode :: NullOrUndefined (ExecutionResultCode), seed :: NullOrUndefined (Int), appUpload :: NullOrUndefined (AmazonResourceName), eventCount :: NullOrUndefined (Int), jobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes), devicePoolArn :: NullOrUndefined (AmazonResourceName), locale :: NullOrUndefined (String), radios :: NullOrUndefined (Radios), location :: NullOrUndefined (Location), customerArtifactPaths :: NullOrUndefined (CustomerArtifactPaths), webUrl :: NullOrUndefined (String) } -> { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), "type" :: NullOrUndefined (TestType), platform :: NullOrUndefined (DevicePlatform), created :: NullOrUndefined (DateTime), status :: NullOrUndefined (ExecutionStatus), result :: NullOrUndefined (ExecutionResult), started :: NullOrUndefined (DateTime), stopped :: NullOrUndefined (DateTime), counters :: NullOrUndefined (Counters), message :: NullOrUndefined (Message), totalJobs :: NullOrUndefined (Int), completedJobs :: NullOrUndefined (Int), billingMethod :: NullOrUndefined (BillingMethod), deviceMinutes :: NullOrUndefined (DeviceMinutes), networkProfile :: NullOrUndefined (NetworkProfile), parsingResultUrl :: NullOrUndefined (String), resultCode :: NullOrUndefined (ExecutionResultCode), seed :: NullOrUndefined (Int), appUpload :: NullOrUndefined (AmazonResourceName), eventCount :: NullOrUndefined (Int), jobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes), devicePoolArn :: NullOrUndefined (AmazonResourceName), locale :: NullOrUndefined (String), radios :: NullOrUndefined (Radios), location :: NullOrUndefined (Location), customerArtifactPaths :: NullOrUndefined (CustomerArtifactPaths), webUrl :: NullOrUndefined (String) }) -> Run
+newRun' :: ({ arn :: Maybe (AmazonResourceName), name :: Maybe (Name), "type" :: Maybe (TestType), platform :: Maybe (DevicePlatform), created :: Maybe (DateTime), status :: Maybe (ExecutionStatus), result :: Maybe (ExecutionResult), started :: Maybe (DateTime), stopped :: Maybe (DateTime), counters :: Maybe (Counters), message :: Maybe (Message), totalJobs :: Maybe (Int), completedJobs :: Maybe (Int), billingMethod :: Maybe (BillingMethod), deviceMinutes :: Maybe (DeviceMinutes), networkProfile :: Maybe (NetworkProfile), parsingResultUrl :: Maybe (String), resultCode :: Maybe (ExecutionResultCode), seed :: Maybe (Int), appUpload :: Maybe (AmazonResourceName), eventCount :: Maybe (Int), jobTimeoutMinutes :: Maybe (JobTimeoutMinutes), devicePoolArn :: Maybe (AmazonResourceName), locale :: Maybe (String), radios :: Maybe (Radios), location :: Maybe (Location), customerArtifactPaths :: Maybe (CustomerArtifactPaths), webUrl :: Maybe (String) } -> { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), "type" :: Maybe (TestType), platform :: Maybe (DevicePlatform), created :: Maybe (DateTime), status :: Maybe (ExecutionStatus), result :: Maybe (ExecutionResult), started :: Maybe (DateTime), stopped :: Maybe (DateTime), counters :: Maybe (Counters), message :: Maybe (Message), totalJobs :: Maybe (Int), completedJobs :: Maybe (Int), billingMethod :: Maybe (BillingMethod), deviceMinutes :: Maybe (DeviceMinutes), networkProfile :: Maybe (NetworkProfile), parsingResultUrl :: Maybe (String), resultCode :: Maybe (ExecutionResultCode), seed :: Maybe (Int), appUpload :: Maybe (AmazonResourceName), eventCount :: Maybe (Int), jobTimeoutMinutes :: Maybe (JobTimeoutMinutes), devicePoolArn :: Maybe (AmazonResourceName), locale :: Maybe (String), radios :: Maybe (Radios), location :: Maybe (Location), customerArtifactPaths :: Maybe (CustomerArtifactPaths), webUrl :: Maybe (String) }) -> Run
 ```
 
 Constructs Run's fields from required parameters
@@ -4870,7 +4870,7 @@ Encode Runs
 
 ``` purescript
 newtype Sample
-  = Sample { arn :: NullOrUndefined (AmazonResourceName), "type" :: NullOrUndefined (SampleType), url :: NullOrUndefined (URL) }
+  = Sample { arn :: Maybe (AmazonResourceName), "type" :: Maybe (SampleType), url :: Maybe (URL) }
 ```
 
 <p>Represents a sample of performance data.</p>
@@ -4895,7 +4895,7 @@ Constructs Sample from required parameters
 #### `newSample'`
 
 ``` purescript
-newSample' :: ({ arn :: NullOrUndefined (AmazonResourceName), "type" :: NullOrUndefined (SampleType), url :: NullOrUndefined (URL) } -> { arn :: NullOrUndefined (AmazonResourceName), "type" :: NullOrUndefined (SampleType), url :: NullOrUndefined (URL) }) -> Sample
+newSample' :: ({ arn :: Maybe (AmazonResourceName), "type" :: Maybe (SampleType), url :: Maybe (URL) } -> { arn :: Maybe (AmazonResourceName), "type" :: Maybe (SampleType), url :: Maybe (URL) }) -> Sample
 ```
 
 Constructs Sample's fields from required parameters
@@ -4936,7 +4936,7 @@ Encode Samples
 
 ``` purescript
 newtype ScheduleRunConfiguration
-  = ScheduleRunConfiguration { extraDataPackageArn :: NullOrUndefined (AmazonResourceName), networkProfileArn :: NullOrUndefined (AmazonResourceName), locale :: NullOrUndefined (String), location :: NullOrUndefined (Location), customerArtifactPaths :: NullOrUndefined (CustomerArtifactPaths), radios :: NullOrUndefined (Radios), auxiliaryApps :: NullOrUndefined (AmazonResourceNames), billingMethod :: NullOrUndefined (BillingMethod) }
+  = ScheduleRunConfiguration { extraDataPackageArn :: Maybe (AmazonResourceName), networkProfileArn :: Maybe (AmazonResourceName), locale :: Maybe (String), location :: Maybe (Location), customerArtifactPaths :: Maybe (CustomerArtifactPaths), radios :: Maybe (Radios), auxiliaryApps :: Maybe (AmazonResourceNames), billingMethod :: Maybe (BillingMethod) }
 ```
 
 <p>Represents the settings for a run. Includes things like location, radio states, auxiliary apps, and network profiles.</p>
@@ -4961,7 +4961,7 @@ Constructs ScheduleRunConfiguration from required parameters
 #### `newScheduleRunConfiguration'`
 
 ``` purescript
-newScheduleRunConfiguration' :: ({ extraDataPackageArn :: NullOrUndefined (AmazonResourceName), networkProfileArn :: NullOrUndefined (AmazonResourceName), locale :: NullOrUndefined (String), location :: NullOrUndefined (Location), customerArtifactPaths :: NullOrUndefined (CustomerArtifactPaths), radios :: NullOrUndefined (Radios), auxiliaryApps :: NullOrUndefined (AmazonResourceNames), billingMethod :: NullOrUndefined (BillingMethod) } -> { extraDataPackageArn :: NullOrUndefined (AmazonResourceName), networkProfileArn :: NullOrUndefined (AmazonResourceName), locale :: NullOrUndefined (String), location :: NullOrUndefined (Location), customerArtifactPaths :: NullOrUndefined (CustomerArtifactPaths), radios :: NullOrUndefined (Radios), auxiliaryApps :: NullOrUndefined (AmazonResourceNames), billingMethod :: NullOrUndefined (BillingMethod) }) -> ScheduleRunConfiguration
+newScheduleRunConfiguration' :: ({ extraDataPackageArn :: Maybe (AmazonResourceName), networkProfileArn :: Maybe (AmazonResourceName), locale :: Maybe (String), location :: Maybe (Location), customerArtifactPaths :: Maybe (CustomerArtifactPaths), radios :: Maybe (Radios), auxiliaryApps :: Maybe (AmazonResourceNames), billingMethod :: Maybe (BillingMethod) } -> { extraDataPackageArn :: Maybe (AmazonResourceName), networkProfileArn :: Maybe (AmazonResourceName), locale :: Maybe (String), location :: Maybe (Location), customerArtifactPaths :: Maybe (CustomerArtifactPaths), radios :: Maybe (Radios), auxiliaryApps :: Maybe (AmazonResourceNames), billingMethod :: Maybe (BillingMethod) }) -> ScheduleRunConfiguration
 ```
 
 Constructs ScheduleRunConfiguration's fields from required parameters
@@ -4970,7 +4970,7 @@ Constructs ScheduleRunConfiguration's fields from required parameters
 
 ``` purescript
 newtype ScheduleRunRequest
-  = ScheduleRunRequest { projectArn :: AmazonResourceName, appArn :: NullOrUndefined (AmazonResourceName), devicePoolArn :: AmazonResourceName, name :: NullOrUndefined (Name), test :: ScheduleRunTest, configuration :: NullOrUndefined (ScheduleRunConfiguration), executionConfiguration :: NullOrUndefined (ExecutionConfiguration) }
+  = ScheduleRunRequest { projectArn :: AmazonResourceName, appArn :: Maybe (AmazonResourceName), devicePoolArn :: AmazonResourceName, name :: Maybe (Name), test :: ScheduleRunTest, configuration :: Maybe (ScheduleRunConfiguration), executionConfiguration :: Maybe (ExecutionConfiguration) }
 ```
 
 <p>Represents a request to the schedule run operation.</p>
@@ -4995,7 +4995,7 @@ Constructs ScheduleRunRequest from required parameters
 #### `newScheduleRunRequest'`
 
 ``` purescript
-newScheduleRunRequest' :: AmazonResourceName -> AmazonResourceName -> ScheduleRunTest -> ({ projectArn :: AmazonResourceName, appArn :: NullOrUndefined (AmazonResourceName), devicePoolArn :: AmazonResourceName, name :: NullOrUndefined (Name), test :: ScheduleRunTest, configuration :: NullOrUndefined (ScheduleRunConfiguration), executionConfiguration :: NullOrUndefined (ExecutionConfiguration) } -> { projectArn :: AmazonResourceName, appArn :: NullOrUndefined (AmazonResourceName), devicePoolArn :: AmazonResourceName, name :: NullOrUndefined (Name), test :: ScheduleRunTest, configuration :: NullOrUndefined (ScheduleRunConfiguration), executionConfiguration :: NullOrUndefined (ExecutionConfiguration) }) -> ScheduleRunRequest
+newScheduleRunRequest' :: AmazonResourceName -> AmazonResourceName -> ScheduleRunTest -> ({ projectArn :: AmazonResourceName, appArn :: Maybe (AmazonResourceName), devicePoolArn :: AmazonResourceName, name :: Maybe (Name), test :: ScheduleRunTest, configuration :: Maybe (ScheduleRunConfiguration), executionConfiguration :: Maybe (ExecutionConfiguration) } -> { projectArn :: AmazonResourceName, appArn :: Maybe (AmazonResourceName), devicePoolArn :: AmazonResourceName, name :: Maybe (Name), test :: ScheduleRunTest, configuration :: Maybe (ScheduleRunConfiguration), executionConfiguration :: Maybe (ExecutionConfiguration) }) -> ScheduleRunRequest
 ```
 
 Constructs ScheduleRunRequest's fields from required parameters
@@ -5004,7 +5004,7 @@ Constructs ScheduleRunRequest's fields from required parameters
 
 ``` purescript
 newtype ScheduleRunResult
-  = ScheduleRunResult { run :: NullOrUndefined (Run) }
+  = ScheduleRunResult { run :: Maybe (Run) }
 ```
 
 <p>Represents the result of a schedule run request.</p>
@@ -5029,7 +5029,7 @@ Constructs ScheduleRunResult from required parameters
 #### `newScheduleRunResult'`
 
 ``` purescript
-newScheduleRunResult' :: ({ run :: NullOrUndefined (Run) } -> { run :: NullOrUndefined (Run) }) -> ScheduleRunResult
+newScheduleRunResult' :: ({ run :: Maybe (Run) } -> { run :: Maybe (Run) }) -> ScheduleRunResult
 ```
 
 Constructs ScheduleRunResult's fields from required parameters
@@ -5038,7 +5038,7 @@ Constructs ScheduleRunResult's fields from required parameters
 
 ``` purescript
 newtype ScheduleRunTest
-  = ScheduleRunTest { "type" :: TestType, testPackageArn :: NullOrUndefined (AmazonResourceName), filter :: NullOrUndefined (Filter), parameters :: NullOrUndefined (TestParameters) }
+  = ScheduleRunTest { "type" :: TestType, testPackageArn :: Maybe (AmazonResourceName), filter :: Maybe (Filter), parameters :: Maybe (TestParameters) }
 ```
 
 <p>Represents additional test settings.</p>
@@ -5063,7 +5063,7 @@ Constructs ScheduleRunTest from required parameters
 #### `newScheduleRunTest'`
 
 ``` purescript
-newScheduleRunTest' :: TestType -> ({ "type" :: TestType, testPackageArn :: NullOrUndefined (AmazonResourceName), filter :: NullOrUndefined (Filter), parameters :: NullOrUndefined (TestParameters) } -> { "type" :: TestType, testPackageArn :: NullOrUndefined (AmazonResourceName), filter :: NullOrUndefined (Filter), parameters :: NullOrUndefined (TestParameters) }) -> ScheduleRunTest
+newScheduleRunTest' :: TestType -> ({ "type" :: TestType, testPackageArn :: Maybe (AmazonResourceName), filter :: Maybe (Filter), parameters :: Maybe (TestParameters) } -> { "type" :: TestType, testPackageArn :: Maybe (AmazonResourceName), filter :: Maybe (Filter), parameters :: Maybe (TestParameters) }) -> ScheduleRunTest
 ```
 
 Constructs ScheduleRunTest's fields from required parameters
@@ -5072,7 +5072,7 @@ Constructs ScheduleRunTest's fields from required parameters
 
 ``` purescript
 newtype ServiceAccountException
-  = ServiceAccountException { message :: NullOrUndefined (Message) }
+  = ServiceAccountException { message :: Maybe (Message) }
 ```
 
 <p>There was a problem with the service account.</p>
@@ -5097,7 +5097,7 @@ Constructs ServiceAccountException from required parameters
 #### `newServiceAccountException'`
 
 ``` purescript
-newServiceAccountException' :: ({ message :: NullOrUndefined (Message) } -> { message :: NullOrUndefined (Message) }) -> ServiceAccountException
+newServiceAccountException' :: ({ message :: Maybe (Message) } -> { message :: Maybe (Message) }) -> ServiceAccountException
 ```
 
 Constructs ServiceAccountException's fields from required parameters
@@ -5156,7 +5156,7 @@ Constructs StopRemoteAccessSessionRequest's fields from required parameters
 
 ``` purescript
 newtype StopRemoteAccessSessionResult
-  = StopRemoteAccessSessionResult { remoteAccessSession :: NullOrUndefined (RemoteAccessSession) }
+  = StopRemoteAccessSessionResult { remoteAccessSession :: Maybe (RemoteAccessSession) }
 ```
 
 <p>Represents the response from the server that describes the remote access session when AWS Device Farm stops the session.</p>
@@ -5181,7 +5181,7 @@ Constructs StopRemoteAccessSessionResult from required parameters
 #### `newStopRemoteAccessSessionResult'`
 
 ``` purescript
-newStopRemoteAccessSessionResult' :: ({ remoteAccessSession :: NullOrUndefined (RemoteAccessSession) } -> { remoteAccessSession :: NullOrUndefined (RemoteAccessSession) }) -> StopRemoteAccessSessionResult
+newStopRemoteAccessSessionResult' :: ({ remoteAccessSession :: Maybe (RemoteAccessSession) } -> { remoteAccessSession :: Maybe (RemoteAccessSession) }) -> StopRemoteAccessSessionResult
 ```
 
 Constructs StopRemoteAccessSessionResult's fields from required parameters
@@ -5224,7 +5224,7 @@ Constructs StopRunRequest's fields from required parameters
 
 ``` purescript
 newtype StopRunResult
-  = StopRunResult { run :: NullOrUndefined (Run) }
+  = StopRunResult { run :: Maybe (Run) }
 ```
 
 <p>Represents the results of your stop run attempt.</p>
@@ -5249,7 +5249,7 @@ Constructs StopRunResult from required parameters
 #### `newStopRunResult'`
 
 ``` purescript
-newStopRunResult' :: ({ run :: NullOrUndefined (Run) } -> { run :: NullOrUndefined (Run) }) -> StopRunResult
+newStopRunResult' :: ({ run :: Maybe (Run) } -> { run :: Maybe (Run) }) -> StopRunResult
 ```
 
 Constructs StopRunResult's fields from required parameters
@@ -5258,7 +5258,7 @@ Constructs StopRunResult's fields from required parameters
 
 ``` purescript
 newtype Suite
-  = Suite { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), "type" :: NullOrUndefined (TestType), created :: NullOrUndefined (DateTime), status :: NullOrUndefined (ExecutionStatus), result :: NullOrUndefined (ExecutionResult), started :: NullOrUndefined (DateTime), stopped :: NullOrUndefined (DateTime), counters :: NullOrUndefined (Counters), message :: NullOrUndefined (Message), deviceMinutes :: NullOrUndefined (DeviceMinutes) }
+  = Suite { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), "type" :: Maybe (TestType), created :: Maybe (DateTime), status :: Maybe (ExecutionStatus), result :: Maybe (ExecutionResult), started :: Maybe (DateTime), stopped :: Maybe (DateTime), counters :: Maybe (Counters), message :: Maybe (Message), deviceMinutes :: Maybe (DeviceMinutes) }
 ```
 
 <p>Represents a collection of one or more tests.</p>
@@ -5283,7 +5283,7 @@ Constructs Suite from required parameters
 #### `newSuite'`
 
 ``` purescript
-newSuite' :: ({ arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), "type" :: NullOrUndefined (TestType), created :: NullOrUndefined (DateTime), status :: NullOrUndefined (ExecutionStatus), result :: NullOrUndefined (ExecutionResult), started :: NullOrUndefined (DateTime), stopped :: NullOrUndefined (DateTime), counters :: NullOrUndefined (Counters), message :: NullOrUndefined (Message), deviceMinutes :: NullOrUndefined (DeviceMinutes) } -> { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), "type" :: NullOrUndefined (TestType), created :: NullOrUndefined (DateTime), status :: NullOrUndefined (ExecutionStatus), result :: NullOrUndefined (ExecutionResult), started :: NullOrUndefined (DateTime), stopped :: NullOrUndefined (DateTime), counters :: NullOrUndefined (Counters), message :: NullOrUndefined (Message), deviceMinutes :: NullOrUndefined (DeviceMinutes) }) -> Suite
+newSuite' :: ({ arn :: Maybe (AmazonResourceName), name :: Maybe (Name), "type" :: Maybe (TestType), created :: Maybe (DateTime), status :: Maybe (ExecutionStatus), result :: Maybe (ExecutionResult), started :: Maybe (DateTime), stopped :: Maybe (DateTime), counters :: Maybe (Counters), message :: Maybe (Message), deviceMinutes :: Maybe (DeviceMinutes) } -> { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), "type" :: Maybe (TestType), created :: Maybe (DateTime), status :: Maybe (ExecutionStatus), result :: Maybe (ExecutionResult), started :: Maybe (DateTime), stopped :: Maybe (DateTime), counters :: Maybe (Counters), message :: Maybe (Message), deviceMinutes :: Maybe (DeviceMinutes) }) -> Suite
 ```
 
 Constructs Suite's fields from required parameters
@@ -5308,7 +5308,7 @@ Encode Suites
 
 ``` purescript
 newtype Test
-  = Test { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), "type" :: NullOrUndefined (TestType), created :: NullOrUndefined (DateTime), status :: NullOrUndefined (ExecutionStatus), result :: NullOrUndefined (ExecutionResult), started :: NullOrUndefined (DateTime), stopped :: NullOrUndefined (DateTime), counters :: NullOrUndefined (Counters), message :: NullOrUndefined (Message), deviceMinutes :: NullOrUndefined (DeviceMinutes) }
+  = Test { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), "type" :: Maybe (TestType), created :: Maybe (DateTime), status :: Maybe (ExecutionStatus), result :: Maybe (ExecutionResult), started :: Maybe (DateTime), stopped :: Maybe (DateTime), counters :: Maybe (Counters), message :: Maybe (Message), deviceMinutes :: Maybe (DeviceMinutes) }
 ```
 
 <p>Represents a condition that is evaluated.</p>
@@ -5333,7 +5333,7 @@ Constructs Test from required parameters
 #### `newTest'`
 
 ``` purescript
-newTest' :: ({ arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), "type" :: NullOrUndefined (TestType), created :: NullOrUndefined (DateTime), status :: NullOrUndefined (ExecutionStatus), result :: NullOrUndefined (ExecutionResult), started :: NullOrUndefined (DateTime), stopped :: NullOrUndefined (DateTime), counters :: NullOrUndefined (Counters), message :: NullOrUndefined (Message), deviceMinutes :: NullOrUndefined (DeviceMinutes) } -> { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), "type" :: NullOrUndefined (TestType), created :: NullOrUndefined (DateTime), status :: NullOrUndefined (ExecutionStatus), result :: NullOrUndefined (ExecutionResult), started :: NullOrUndefined (DateTime), stopped :: NullOrUndefined (DateTime), counters :: NullOrUndefined (Counters), message :: NullOrUndefined (Message), deviceMinutes :: NullOrUndefined (DeviceMinutes) }) -> Test
+newTest' :: ({ arn :: Maybe (AmazonResourceName), name :: Maybe (Name), "type" :: Maybe (TestType), created :: Maybe (DateTime), status :: Maybe (ExecutionStatus), result :: Maybe (ExecutionResult), started :: Maybe (DateTime), stopped :: Maybe (DateTime), counters :: Maybe (Counters), message :: Maybe (Message), deviceMinutes :: Maybe (DeviceMinutes) } -> { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), "type" :: Maybe (TestType), created :: Maybe (DateTime), status :: Maybe (ExecutionStatus), result :: Maybe (ExecutionResult), started :: Maybe (DateTime), stopped :: Maybe (DateTime), counters :: Maybe (Counters), message :: Maybe (Message), deviceMinutes :: Maybe (DeviceMinutes) }) -> Test
 ```
 
 Constructs Test's fields from required parameters
@@ -5406,7 +5406,7 @@ Encode TransactionIdentifier
 
 ``` purescript
 newtype TrialMinutes
-  = TrialMinutes { total :: NullOrUndefined (Number), remaining :: NullOrUndefined (Number) }
+  = TrialMinutes { total :: Maybe (Number), remaining :: Maybe (Number) }
 ```
 
 <p>Represents information about free trial device minutes for an AWS account.</p>
@@ -5431,7 +5431,7 @@ Constructs TrialMinutes from required parameters
 #### `newTrialMinutes'`
 
 ``` purescript
-newTrialMinutes' :: ({ total :: NullOrUndefined (Number), remaining :: NullOrUndefined (Number) } -> { total :: NullOrUndefined (Number), remaining :: NullOrUndefined (Number) }) -> TrialMinutes
+newTrialMinutes' :: ({ total :: Maybe (Number), remaining :: Maybe (Number) } -> { total :: Maybe (Number), remaining :: Maybe (Number) }) -> TrialMinutes
 ```
 
 Constructs TrialMinutes's fields from required parameters
@@ -5456,7 +5456,7 @@ Encode URL
 
 ``` purescript
 newtype UniqueProblem
-  = UniqueProblem { message :: NullOrUndefined (Message), problems :: NullOrUndefined (Problems) }
+  = UniqueProblem { message :: Maybe (Message), problems :: Maybe (Problems) }
 ```
 
 <p>A collection of one or more problems, grouped by their result.</p>
@@ -5481,7 +5481,7 @@ Constructs UniqueProblem from required parameters
 #### `newUniqueProblem'`
 
 ``` purescript
-newUniqueProblem' :: ({ message :: NullOrUndefined (Message), problems :: NullOrUndefined (Problems) } -> { message :: NullOrUndefined (Message), problems :: NullOrUndefined (Problems) }) -> UniqueProblem
+newUniqueProblem' :: ({ message :: Maybe (Message), problems :: Maybe (Problems) } -> { message :: Maybe (Message), problems :: Maybe (Problems) }) -> UniqueProblem
 ```
 
 Constructs UniqueProblem's fields from required parameters
@@ -5522,7 +5522,7 @@ Encode UniqueProblemsByExecutionResultMap
 
 ``` purescript
 newtype UpdateDevicePoolRequest
-  = UpdateDevicePoolRequest { arn :: AmazonResourceName, name :: NullOrUndefined (Name), description :: NullOrUndefined (Message), rules :: NullOrUndefined (Rules) }
+  = UpdateDevicePoolRequest { arn :: AmazonResourceName, name :: Maybe (Name), description :: Maybe (Message), rules :: Maybe (Rules) }
 ```
 
 <p>Represents a request to the update device pool operation.</p>
@@ -5547,7 +5547,7 @@ Constructs UpdateDevicePoolRequest from required parameters
 #### `newUpdateDevicePoolRequest'`
 
 ``` purescript
-newUpdateDevicePoolRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, name :: NullOrUndefined (Name), description :: NullOrUndefined (Message), rules :: NullOrUndefined (Rules) } -> { arn :: AmazonResourceName, name :: NullOrUndefined (Name), description :: NullOrUndefined (Message), rules :: NullOrUndefined (Rules) }) -> UpdateDevicePoolRequest
+newUpdateDevicePoolRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, name :: Maybe (Name), description :: Maybe (Message), rules :: Maybe (Rules) } -> { arn :: AmazonResourceName, name :: Maybe (Name), description :: Maybe (Message), rules :: Maybe (Rules) }) -> UpdateDevicePoolRequest
 ```
 
 Constructs UpdateDevicePoolRequest's fields from required parameters
@@ -5556,7 +5556,7 @@ Constructs UpdateDevicePoolRequest's fields from required parameters
 
 ``` purescript
 newtype UpdateDevicePoolResult
-  = UpdateDevicePoolResult { devicePool :: NullOrUndefined (DevicePool) }
+  = UpdateDevicePoolResult { devicePool :: Maybe (DevicePool) }
 ```
 
 <p>Represents the result of an update device pool request.</p>
@@ -5581,7 +5581,7 @@ Constructs UpdateDevicePoolResult from required parameters
 #### `newUpdateDevicePoolResult'`
 
 ``` purescript
-newUpdateDevicePoolResult' :: ({ devicePool :: NullOrUndefined (DevicePool) } -> { devicePool :: NullOrUndefined (DevicePool) }) -> UpdateDevicePoolResult
+newUpdateDevicePoolResult' :: ({ devicePool :: Maybe (DevicePool) } -> { devicePool :: Maybe (DevicePool) }) -> UpdateDevicePoolResult
 ```
 
 Constructs UpdateDevicePoolResult's fields from required parameters
@@ -5590,7 +5590,7 @@ Constructs UpdateDevicePoolResult's fields from required parameters
 
 ``` purescript
 newtype UpdateNetworkProfileRequest
-  = UpdateNetworkProfileRequest { arn :: AmazonResourceName, name :: NullOrUndefined (Name), description :: NullOrUndefined (Message), "type" :: NullOrUndefined (NetworkProfileType), uplinkBandwidthBits :: NullOrUndefined (Number), downlinkBandwidthBits :: NullOrUndefined (Number), uplinkDelayMs :: NullOrUndefined (Number), downlinkDelayMs :: NullOrUndefined (Number), uplinkJitterMs :: NullOrUndefined (Number), downlinkJitterMs :: NullOrUndefined (Number), uplinkLossPercent :: NullOrUndefined (PercentInteger), downlinkLossPercent :: NullOrUndefined (PercentInteger) }
+  = UpdateNetworkProfileRequest { arn :: AmazonResourceName, name :: Maybe (Name), description :: Maybe (Message), "type" :: Maybe (NetworkProfileType), uplinkBandwidthBits :: Maybe (Number), downlinkBandwidthBits :: Maybe (Number), uplinkDelayMs :: Maybe (Number), downlinkDelayMs :: Maybe (Number), uplinkJitterMs :: Maybe (Number), downlinkJitterMs :: Maybe (Number), uplinkLossPercent :: Maybe (PercentInteger), downlinkLossPercent :: Maybe (PercentInteger) }
 ```
 
 ##### Instances
@@ -5613,7 +5613,7 @@ Constructs UpdateNetworkProfileRequest from required parameters
 #### `newUpdateNetworkProfileRequest'`
 
 ``` purescript
-newUpdateNetworkProfileRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, name :: NullOrUndefined (Name), description :: NullOrUndefined (Message), "type" :: NullOrUndefined (NetworkProfileType), uplinkBandwidthBits :: NullOrUndefined (Number), downlinkBandwidthBits :: NullOrUndefined (Number), uplinkDelayMs :: NullOrUndefined (Number), downlinkDelayMs :: NullOrUndefined (Number), uplinkJitterMs :: NullOrUndefined (Number), downlinkJitterMs :: NullOrUndefined (Number), uplinkLossPercent :: NullOrUndefined (PercentInteger), downlinkLossPercent :: NullOrUndefined (PercentInteger) } -> { arn :: AmazonResourceName, name :: NullOrUndefined (Name), description :: NullOrUndefined (Message), "type" :: NullOrUndefined (NetworkProfileType), uplinkBandwidthBits :: NullOrUndefined (Number), downlinkBandwidthBits :: NullOrUndefined (Number), uplinkDelayMs :: NullOrUndefined (Number), downlinkDelayMs :: NullOrUndefined (Number), uplinkJitterMs :: NullOrUndefined (Number), downlinkJitterMs :: NullOrUndefined (Number), uplinkLossPercent :: NullOrUndefined (PercentInteger), downlinkLossPercent :: NullOrUndefined (PercentInteger) }) -> UpdateNetworkProfileRequest
+newUpdateNetworkProfileRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, name :: Maybe (Name), description :: Maybe (Message), "type" :: Maybe (NetworkProfileType), uplinkBandwidthBits :: Maybe (Number), downlinkBandwidthBits :: Maybe (Number), uplinkDelayMs :: Maybe (Number), downlinkDelayMs :: Maybe (Number), uplinkJitterMs :: Maybe (Number), downlinkJitterMs :: Maybe (Number), uplinkLossPercent :: Maybe (PercentInteger), downlinkLossPercent :: Maybe (PercentInteger) } -> { arn :: AmazonResourceName, name :: Maybe (Name), description :: Maybe (Message), "type" :: Maybe (NetworkProfileType), uplinkBandwidthBits :: Maybe (Number), downlinkBandwidthBits :: Maybe (Number), uplinkDelayMs :: Maybe (Number), downlinkDelayMs :: Maybe (Number), uplinkJitterMs :: Maybe (Number), downlinkJitterMs :: Maybe (Number), uplinkLossPercent :: Maybe (PercentInteger), downlinkLossPercent :: Maybe (PercentInteger) }) -> UpdateNetworkProfileRequest
 ```
 
 Constructs UpdateNetworkProfileRequest's fields from required parameters
@@ -5622,7 +5622,7 @@ Constructs UpdateNetworkProfileRequest's fields from required parameters
 
 ``` purescript
 newtype UpdateNetworkProfileResult
-  = UpdateNetworkProfileResult { networkProfile :: NullOrUndefined (NetworkProfile) }
+  = UpdateNetworkProfileResult { networkProfile :: Maybe (NetworkProfile) }
 ```
 
 ##### Instances
@@ -5645,7 +5645,7 @@ Constructs UpdateNetworkProfileResult from required parameters
 #### `newUpdateNetworkProfileResult'`
 
 ``` purescript
-newUpdateNetworkProfileResult' :: ({ networkProfile :: NullOrUndefined (NetworkProfile) } -> { networkProfile :: NullOrUndefined (NetworkProfile) }) -> UpdateNetworkProfileResult
+newUpdateNetworkProfileResult' :: ({ networkProfile :: Maybe (NetworkProfile) } -> { networkProfile :: Maybe (NetworkProfile) }) -> UpdateNetworkProfileResult
 ```
 
 Constructs UpdateNetworkProfileResult's fields from required parameters
@@ -5654,7 +5654,7 @@ Constructs UpdateNetworkProfileResult's fields from required parameters
 
 ``` purescript
 newtype UpdateProjectRequest
-  = UpdateProjectRequest { arn :: AmazonResourceName, name :: NullOrUndefined (Name), defaultJobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes) }
+  = UpdateProjectRequest { arn :: AmazonResourceName, name :: Maybe (Name), defaultJobTimeoutMinutes :: Maybe (JobTimeoutMinutes) }
 ```
 
 <p>Represents a request to the update project operation.</p>
@@ -5679,7 +5679,7 @@ Constructs UpdateProjectRequest from required parameters
 #### `newUpdateProjectRequest'`
 
 ``` purescript
-newUpdateProjectRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, name :: NullOrUndefined (Name), defaultJobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes) } -> { arn :: AmazonResourceName, name :: NullOrUndefined (Name), defaultJobTimeoutMinutes :: NullOrUndefined (JobTimeoutMinutes) }) -> UpdateProjectRequest
+newUpdateProjectRequest' :: AmazonResourceName -> ({ arn :: AmazonResourceName, name :: Maybe (Name), defaultJobTimeoutMinutes :: Maybe (JobTimeoutMinutes) } -> { arn :: AmazonResourceName, name :: Maybe (Name), defaultJobTimeoutMinutes :: Maybe (JobTimeoutMinutes) }) -> UpdateProjectRequest
 ```
 
 Constructs UpdateProjectRequest's fields from required parameters
@@ -5688,7 +5688,7 @@ Constructs UpdateProjectRequest's fields from required parameters
 
 ``` purescript
 newtype UpdateProjectResult
-  = UpdateProjectResult { project :: NullOrUndefined (Project) }
+  = UpdateProjectResult { project :: Maybe (Project) }
 ```
 
 <p>Represents the result of an update project request.</p>
@@ -5713,7 +5713,7 @@ Constructs UpdateProjectResult from required parameters
 #### `newUpdateProjectResult'`
 
 ``` purescript
-newUpdateProjectResult' :: ({ project :: NullOrUndefined (Project) } -> { project :: NullOrUndefined (Project) }) -> UpdateProjectResult
+newUpdateProjectResult' :: ({ project :: Maybe (Project) } -> { project :: Maybe (Project) }) -> UpdateProjectResult
 ```
 
 Constructs UpdateProjectResult's fields from required parameters
@@ -5722,7 +5722,7 @@ Constructs UpdateProjectResult's fields from required parameters
 
 ``` purescript
 newtype Upload
-  = Upload { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), created :: NullOrUndefined (DateTime), "type" :: NullOrUndefined (UploadType), status :: NullOrUndefined (UploadStatus), url :: NullOrUndefined (URL), metadata :: NullOrUndefined (Metadata), contentType :: NullOrUndefined (ContentType), message :: NullOrUndefined (Message) }
+  = Upload { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), created :: Maybe (DateTime), "type" :: Maybe (UploadType), status :: Maybe (UploadStatus), url :: Maybe (URL), metadata :: Maybe (Metadata), contentType :: Maybe (ContentType), message :: Maybe (Message) }
 ```
 
 <p>An app or a set of one or more tests to upload or that have been uploaded.</p>
@@ -5747,7 +5747,7 @@ Constructs Upload from required parameters
 #### `newUpload'`
 
 ``` purescript
-newUpload' :: ({ arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), created :: NullOrUndefined (DateTime), "type" :: NullOrUndefined (UploadType), status :: NullOrUndefined (UploadStatus), url :: NullOrUndefined (URL), metadata :: NullOrUndefined (Metadata), contentType :: NullOrUndefined (ContentType), message :: NullOrUndefined (Message) } -> { arn :: NullOrUndefined (AmazonResourceName), name :: NullOrUndefined (Name), created :: NullOrUndefined (DateTime), "type" :: NullOrUndefined (UploadType), status :: NullOrUndefined (UploadStatus), url :: NullOrUndefined (URL), metadata :: NullOrUndefined (Metadata), contentType :: NullOrUndefined (ContentType), message :: NullOrUndefined (Message) }) -> Upload
+newUpload' :: ({ arn :: Maybe (AmazonResourceName), name :: Maybe (Name), created :: Maybe (DateTime), "type" :: Maybe (UploadType), status :: Maybe (UploadStatus), url :: Maybe (URL), metadata :: Maybe (Metadata), contentType :: Maybe (ContentType), message :: Maybe (Message) } -> { arn :: Maybe (AmazonResourceName), name :: Maybe (Name), created :: Maybe (DateTime), "type" :: Maybe (UploadType), status :: Maybe (UploadStatus), url :: Maybe (URL), metadata :: Maybe (Metadata), contentType :: Maybe (ContentType), message :: Maybe (Message) }) -> Upload
 ```
 
 Constructs Upload's fields from required parameters
